@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/tools.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
+</head>
+<body id="con">
+		<!-- index_header -->
+	<div id="index_header login_header">
+<!-- 		<div class="count_down">
+			<h3>距离剁手节还剩下：</h3>
+			<p>
+				<span></span><b>天</b>
+				<span></span><b>小时</b>
+				<span></span><b>分</b>
+				<span></span><b>秒</b>
+			</p>
+		</div> -->
+		<div id="headerbanner"></div>
+		<div id="hea_nav">
+			<div class="heanav_con login_nav">
+				<div class="ind_link"><a href="index.html">时尚商城</a></div>
+				<div class="phone phone_left"><a href="index.html">
+					<i class="mobile_phone"></i>
+					手机优购
+					<i class="tip tip_left"></i>
+					</a>
+					<div class="phone_con phone_con1">
+						<div class="clearfix">
+							<div class="f1 qr_code1"></div>
+							<div class="f1 qr_code2">
+								<a class="code2_a1" href="http://www.apple.com/itunes/download/" target="_blank"></a>
+								<a class="code2_a2" href="http://mobile.yougou.com/appVersion/package.sc?channelCode=YgYougouwebA59" target="_blank"></a>
+							</div>
+						</div>
+						<div class="code_tip">
+							下载安装
+							<strong>优购客户端</strong>
+						</div>
+					</div>
+				</div>
+				<div class="hea_login login_log">
+					<div class="register">
+						<a href="register.html">注册</a>
+					</div>
+					<div class="login">
+						<a href="login.html">登录</a>
+					</div>
+				</div>
+				<div class="phone myy1"><a href="index.html">
+					我的优购
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con myug_con1">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">我的收藏</a></div>
+					</div>
+				</div>
+				<div class="index_confirm">我的订单</div>
+				<div class="phone gonggao gonggao1"><a href="list.html">
+					公告
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con gonggao_pos1 pos1" style="width:200px;">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">我的收藏</a></div>
+					</div>
+				</div>
+				<div class="phone gonggao gonggao2"><a href="list.html">
+					更多
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con gonggao_pos1 pos2">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">我的收藏</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="login_logo">
+			<div class="l_logo"><a href="index.html"><img src="../img/login/signin-register-logo.png" alt=""></a></div>
+			<p>用户登录</p>
+		</div>
+	</div>
+
+		
+		<!-- login_container -->
+	
+	<div id="login_container">
+		<div class="login_con">
+			<a href="www.yougou.com/" target="_blank" class="cen-new"></a>
+			<div class="login_main">
+				<div class="login_lz">
+					<a href="#">登录</a>
+					<a class="register" href="register.html">注册</a>
+				</div>
+				<div class="login_form">
+					<form action="post" class="form_con">
+						<div class="uckn">
+							<span></span>
+							<input type="text" id="username" placeholder="手机号/会员名称/邮箱" />
+						</div>
+						<div class="uckf" >
+							<div class="uckf1 uckf11"><span></span>用户名或密码不正确</div>
+						</div>
+						<div class="psd">
+							<span></span>
+							<input type="password" id="password" placeholder="请输入密码" />
+						</div>
+						<div class="pasf"></div>
+						<!-- 验证码 -->
+						<div class="ver">
+							<span></span>
+							<input type="text" id="ver_con" placeholder="请输入验证码" />
+						</div>
+						<!-- <input type="text" id="yanzheng" /> -->
+						<div id="yanzheng">
+							<!-- <img id="imageValidate2" onclick="changeValidateImage2();return false;" src="https://passport.yougou.com/servlet/imageCaptcha?rand=0.22325140913017094"> -->
+							<input type="text" id="yanzheng_name" />
+						</div>
+						<div class="vercf"></div>
+						<div class="forget">
+							<a href="http://www.yougou.com/forgotpassword.jhtml">忘记密码？</a>
+						</div>
+						<div class="log_sub"><input type="button" id="nlog_submit" value="点击登录" title="登录"></div>
+						<p>使用合作网站账号登录优购:</p>
+						<div class="bot">
+							<p class="cop_link">
+		                        <a class="we_chat f_blue" href="/member/toThirdPartLogin.jhtml?type=quick-weixin&amp;redirectURL=http://www.yougou.com/">&nbsp;</a> |
+		                        <a href="/api/alipay/sendToFastLogin.sc?redirectURL=http://www.yougou.com/" class="nreg_zpay f_blue">&nbsp;</a> |
+		                        <a href="/api/qq/toLogin.sc?redirectURL=http://www.yougou.com/" class="nreg_qq f_blue">&nbsp;</a> |
+		                        <a href="/api/sina/toLogin.sc?redirectURL=http://www.yougou.com/" class="nreg_sina f_blue">&nbsp;</a> |
+		                        <a href="/api/renren/toRenren.sc?redirectURL=http://www.yougou.com/" class="nreg_people f_blue">&nbsp;</a>
+		                    </p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- login_footer -->
+	<div id="login_footer">
+		<div class="lf_con">
+			<p class="tright"> Copyright © 2011-2014 Yougou Technology Co., Ltd. 
+			<a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备09070608号-4</a> 增值电信业务经营许可证：
+			<a href="http://www.miibeian.gov.cn" target="_blank" style="padding-left:0">粤 B2-20090203</a></p>
+		</div>
+	</div>
+</body>
+</html>

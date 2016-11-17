@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>确认订单</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/confirm.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/tools.js"></script>
+	<script type="text/javascript" src="../js/confirm.js"></script>
+</head>
+<body id="con">
+		<!-- index_header -->
+	<div id="index_header login_header">
+<!-- 		<div class="count_down">
+			<h3>距离剁手节还剩下：</h3>
+			<p>
+				<span></span><b>天</b>
+				<span></span><b>小时</b>
+				<span></span><b>分</b>
+				<span></span><b>秒</b>
+			</p>
+		</div> -->
+		<div id="headerbanner"></div>
+		<div id="hea_nav">
+			<div class="heanav_con login_nav">
+				<div class="ind_link"><a href="index.html" style="margin-left:20px;">时尚商城</a></div>
+				<div class="phone phone_left"><a href="index.html">
+					<i class="mobile_phone"></i>
+					手机优购
+					<i class="tip tip_left"></i>
+					</a>
+					<div class="phone_con phone_con1">
+						<div class="clearfix">
+							<div class="f1 qr_code1"></div>
+							<div class="f1 qr_code2">
+								<a class="code2_a1" href="http://www.apple.com/itunes/download/" target="_blank">
+								<a class="code2_a2" href="http://mobile.yougou.com/appVersion/package.sc?channelCode=YgYougouwebA59" target="_blank">
+							</div>
+						</div>
+						<div class="code_tip">
+							下载安装
+							<strong>优购客户端</strong>
+						</div>
+					</div>
+				</div>
+				<div class="hea_login login_log">
+					<div class="login_con">
+						<div class="register">
+							<a href="register.html">注册</a>
+						</div>
+						<div class="login">
+							<a href="login.html">登录</a>
+						</div>
+					</div>
+					<div class="login_success">
+						您好！<span></span>
+						<a class="quit" href="#">退出</a>
+					</div>
+				</div>
+				<div class="phone myy1"><a href="index.html">
+					我的优购
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con myug_con1">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">我的收藏</a></div>
+					</div>
+				</div>
+				<div class="index_confirm">我的订单</div>
+				<div class="phone gonggao gonggao1"><a href="list.html">
+					公告
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con gonggao_pos1 pos1" style="width:200px;">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">我的收藏</a></div>
+					</div>
+				</div>
+				<div class="phone gonggao gonggao2"><a href="list.html">
+					更多
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con gonggao_pos1 pos2">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">我的收藏</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="login_logo">
+			<div class="l_logo"><a href="index.html"><img src="../img/login/signin-register-logo.png" alt=""></a></div>
+			<p></p>
+			<div class="cart_step">
+				<ul>
+		            <li ><a href="cart.html">我的购物车</a><em></em><i></i></li>
+		            <li class="current">提交订单中心<em></em><i class="i2"></i></li>
+		            <li>成功提交订单</li>
+	       		</ul>
+			</div>
+		</div>
+	</div>
+
+		<!-- index_container -->
+	
+	<div id="index_container">
+		<div class="cartcon-top">
+			<div class="ct_tit">
+				<h2>请填写您的收货地址</h2>
+				<a class="cart_back_link" href="cart.html">返回购物车</a>
+				<span><a href="/my/address.jhtml" target="_blank" class="cblue">管理收货地址</a></span>
+			</div>
+			<div class="ct_con">
+				<table class="table_address">
+	       		 <tbody>
+	            <tr id="checkPhoeOrderContainer" style="height:33px;overflow:hidden;display:none;">
+	           		<td class="tdleft" style="height:25px; overflow:hidden"></td>
+	           		<td style="height:25px; overflow:hidden"><div class="warnmsgbg" style="width:550px"><span class="warnmsg Black">为了更好的为您服务，请验证手机号码，每个手机号码只验证一次。</span></div></td>
+	            </tr>
+	           <tr>
+	                <td class="tdleft tdname">收货人姓名<i>*</i></td>
+	                <td>
+	                    <input type="text" maxlength="16" id="receivingName" name="receivingName" class="minput">
+	                    <span id="receivingName_tips" class="mltips">
+		                    <span class="mltips1 mlt1" ></span>
+		                    <font class="c9">（请使用真实姓名，不能全部是数字/英文/包含特殊符号（括号、井号等））</font>
+		                </span>
+	                </td>
+	           </tr>
+	           <tr>
+	                <td class="tdleft">收货人地址<i>*</i></td>
+	            	<td>
+	            		<select id="province"></select>
+						<select id="city"></select>
+						<select id="district"></select>
+						<span class="mltips1 mlt2"  ></span>
+						<span class="mltips">
+							<span class="youbian">邮政编码：</span>
+							<input type="text" class="youbian_con" />
+							<span class="youbian">（有助于快速确定送货地址）</span>
+						</span>
+					</td>
+	         	</tr>
+	         	<tr>
+	             	<td class="tdleft"></td>
+	           		<td>
+	           			<span class="addre">
+							<span class="addre_province"></span>
+							<span class="addre_city"></span>
+							<span class="addre_dis"></span>
+	           			</span>
+		             	<input type="text" id="receivingAddress" name="receivingAddress" maxlength="60" class="linput" style="width:250px;float:left;">
+		             	<span id="receivingAddress_tips" class="mltips" style="width:200px;">
+						<span class="mltips1 mlt3"></span>
+		             	<font class="f_red">&nbsp;&nbsp;（请填写详细地址，确保准确送达）</font></span>
+	           		</td>
+	        	</tr>
+	        	<tr>
+	          		<td class="tdleft">收货人手机<i>*</i></td>
+	          		<td style="vertical-align:middle;><span class="fl"> <input  style="margin-top:10px;" id="receivingMobilePhone" name="receivingMobilePhone" class="minput" value="" type="text"> </span>
+			           <!--  <span id="updatePhoneOrder_tips" class="pl12 fl none"> <font class="f_red">您的手机号码已经变更，请重新获取验证码</font> </span> -->
+			             <span id="receivingMobilePhone_tips" class="mltips fl mltips4">
+								您的手机号格式不规范！请重新输入。
+			             </span>
+			           <!--  <span id="yzspanarea"></span>
+			            <span id="sendSmsOrderBtnContainer" style="margin-top: 5px;"><input style="display: none;" id="sendSmsOrderBtn" onclick="sendSMSCodeByOrder();" value="获取验证码" type="button"></span> -->
+			            <!-- <span class="yzdjs center none fl" id="yzdjs1"></span> -->
+			            <!-- <input type="button" value="秒后重新获取" id="yzdjs1" class="none" style="width:115px;">
+			            <span style="display:none;" class="phoneCodeOrder_tips rightTips" id="phoneCodeOrder_tips">&nbsp;</span>
+			            <span id="checkResultOrder_tips" class="f_black none" style="padding-left: 12px;"></span>
+			            <input style="display: none;width:75px;margin-left:5px;" id="phoneCodeOrderTxt" name="activeCode" class="sinput Gray none" onfocus="if(this.value=='请输入验证码')this.value='';" onblur="if(this.value=='')this.value='请输入验证码';" value="" type="text" maxlength="4">
+			            <span id="codeCheckOrderResult_tips" class="none"> <font class="Green">验证成功</font><font class="f_red">验证码错误</font> </span>
+			            <span style="padding-left:8px;"> 
+	            			<input style="display:none;" type="button" value="确认" class="payNormalBtn" onclick="checkSmsCodeOrder();" id="checkSmsCodeOrderBtn">
+	            		</span>  -->
+	          		</td>
+	       		</tr>
+	       		<tr>
+	                <td class="tdleft">收货时间：<i>*</i></td>
+	                <td>
+	                    <select name="deliveryDate" class="mselect delivery_time">
+	                        <option value="1">只工作日送货(双休日、假日不用送)</option>
+	                        <option value="2">工作日、双休日与假日均可送货</option>
+	                        <option value="3">只双休日、假日送货(工作日不用送)</option>
+	                        <!-- 
+	                        <option value="4">学校地址/地址白天没人</option>
+	                        -->
+	                    </select>
+	                    <span class="cgray">（送货时间仅供参考，快递公司会尽量满足您的要求）</span>
+	                </td>
+	            </tr>
+
+	        </tbody>
+	   		 </table>
+			</div>
+			<button class="save_addr"> 保存地址信息</button>
+		</div>
+		<div class="gldz">
+			
+			<div class="addr_box" style="display:none;">
+				<div>
+					<span>收货人姓名：</span>
+					<div class="add_name add_con1"></div>
+				</div>
+				<div><span>收货人地址：</span><div class="add_addr add_con1">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div></div>
+				<div><span>街道地址：</span><div class="add_street add_con1"></div></div>
+				<div><span>收货人电话：</span><div class="add_phone add_con1"></div></div>
+			</div>
+		</div>
+		<div class="addr">
+			<div class="getmoney">
+				<h2>请选择您的付款方式</h2>
+				<span><a href="http://www.yougou.com/help/payonline.html" target="_blank" class="cblue">查看银行限额及付款帮助</a></span>
+			</div>
+			<div class="mt1">
+				<strong>在线支付 </strong><span>(满99元在线支付免运费)</span>
+			</div>
+			<div class="add_con">
+				<div id="ucTab" class="uc_tab ml15 clearfix">
+					<a class="current" href="javascript:void(0);">
+						<span>网银支付</span>
+					</a>
+					<a href="javascript:void(0);">
+						<span>信用卡</span>
+					</a>
+					<a href="javascript:void(0);">
+						<span>支付平台</span>
+					</a>
+				</div>
+				<dl class="clear_fix">
+				  <dt>
+					<span class="c9 ml10">支持国内几乎所有银行的储蓄卡及信用卡进行支付（需开通网上银行）</span>
+				  </dt>
+				  <dd class="mb15">
+						<span><input type="radio" name="webbankpay" id="bank_zhaoshang" value="zhaoshang"></span>
+						<img src="../img/confirm/bank-img3 .png" width="139" height="40" title="招商银行" alt="招商银行">
+				  </dd>
+				  <dd class="mb15">
+					<span><input type="radio" name="webbankpay" id="bank_gongshang" value="gongshang"></span>
+					<img src="../img/confirm/bank-img2.png" width="139" height="40" title="中国工商银行" alt="中国工商银行">
+				  </dd>
+				  <dd class="mb15">
+					<span><input type="radio" name="webbankpay" id="bank_nongye" value="nongye"></span>
+					<img src="../img/confirm/bank-img4.png" width="139" height="40" title="中国农业银行" alt="中国农业银行">
+				  </dd>
+				  <dd class="mb15">
+					<span><input type="radio" name="webbankpay" id="bank_jianshe" value="jianshe"></span>
+					<img src="../img/confirm/bank-img5.png" width="139" height="40" title="中国建设银行" alt="中国建设银行">
+				  </dd>
+				  <dd class="mb15">
+					<span><input type="radio" name="webbankpay" id="bank_zhongguo" value="zhongguo"></span>
+					<img src="../img/confirm/bank-img6.png" width="139" height="40" title="中国银行" alt="中国银行">
+				  </dd>
+				  <dd class="mb15">
+					<span><input type="radio" name="webbankpay" id="bank_jiaotong" value="jiaotong"></span>
+					<img src="../img/confirm/bank-img39.png" width="139" height="40" title="交通银行" alt="交通银行">
+				  </dd>
+				  <dd class="mb15">
+					<span><input type="radio" name="webbankpay" id="bank_youzheng" value="youzheng"></span>
+					<img src="../img/confirm/bank-img8.png" width="139" height="40" title="中国邮政储蓄银行" alt="中国邮政储蓄银行">
+				  </dd>
+				  <dd class="mb15">
+					<span><input type="radio" name="webbankpay" id="bank_pufa" value="pufa"></span>
+					<img src="../img/confirm/bank-img9.png" width="139" height="40" title="浦发银行" alt="浦发银行">
+				  </dd>
+				  <dd class="mb15">
+					<span><input type="radio" name="webbankpay" id="bank_guangda" value="guangda"></span>
+					<img src="../img/confirm/bank-img10.png" width="139" height="40" title="中国光大银行" alt="中国光大银行">
+				  </dd>
+				  <dd class="mb15">
+					<span><input type="radio" name="webbankpay" id="bank_guangfa" value="guangfa"></span>
+					<img src="../img/confirm/bank-img11.png" width="139" height="40" title="广东发展银行" alt="广东发展银行">
+				  </dd>
+				  <div class="clear">
+				  <div style="width: 95%;margin-left:20px;margin-bottom: 15px;background: #f1f1f1;color: #f1f1f1;height:1px;border:0;"></div></div>
+				  <dd class="" style="margin-top:15px;">
+					<span><input type="radio" name="webbankpay" id="webbank_minsheng" value="minsheng"></span>
+					<img src="../img/confirm/bank-img12.png" width="139" height="40" title="中国民生银行" alt="中国民生银行">
+				  </dd>
+				  <dd class="" style="margin-top:15px;">
+					<span><input type="radio" name="webbankpay" id="webbank_xingye" value="xingye"></span>
+					<img src="../img/confirm/bank-img20.png" width="139" height="40" title="兴业银行" alt="兴业银行">
+				  </dd>
+				  <dd class="" style="margin-top:15px;">
+					<span><input type="radio" name="webbankpay" id="webbank_zhongxin" value="zhongxin"></span>
+					<img src="../img/confirm/bank-img24.png" width="139" height="40" title="中信银行" alt="中信银行">
+				  </dd>
+				  <dd class="" style="margin-top:15px;">
+					<span><input type="radio" name="webbankpay" id="webbank_beijing" value="beijing"></span>
+					<img src="../img/confirm/bank-img23.png" width="139" height="40" title="北京银行" alt="北京银行">
+				  </dd>
+
+				  <dd class="" style="margin-top:15px;">
+					<span><input type="radio" name="webbankpay" id="webbank_huaxia" value="huaxia"></span>
+					<img src="../img/confirm/bank-img25.png" width="139" height="40" title="华厦银行" alt="华厦银行">
+				  </dd>
+				  <dd class="">
+					<span><input type="radio" name="webbankpay" id="webbank_shanghai" value="shanghai"></span>
+					<img src="../img/confirm/bank-img26.png" width="139" height="40" title="上海银行" alt="上海银行">
+				  </dd>
+				  <dd class="hover">
+					<span><input type="radio" name="webbankpay" id="webbank_guangzhou" value="guangzhou"></span>
+					<img src="../img/confirm/bank-img27.png" width="139" height="40" title="广州银行" alt="广州银行">
+				  </dd>
+				  <dd class="">
+					<span><input type="radio" name="webbankpay" id="webbank_hangzhou" value="hangzhou"></span>
+					<img src="../img/confirm/bank-img28.png" width="139" height="40" title="杭州银行" alt="杭州银行">
+				  </dd>
+				  <dd class="">
+					<span><input type="radio" name="webbankpay" id="webbank_bohai" value="bohai"></span>
+					<img src="../img/confirm/bank-img29.png" width="139" height="40" title="渤海银行" alt="渤海银行">
+				  </dd>
+				  <dd class="">
+					<span><input type="radio" name="webbankpay" id="webbank_dongya" value="dongya"></span>
+					<img src="../img/confirm/bank-img30.png" width="139" height="40" title="BEA东亚银行" alt="BEA东亚银行">
+				  </dd>
+				  
+				  <dd class="">
+					<span><input type="radio" name="webbankpay" id="webbank_ningbo" value="ningbo"></span>
+					<img src="../img/confirm/bank-img31.png" width="139" height="40" title="宁波银行" alt="宁波银行">
+				  </dd>
+				  <dd class="">
+					<span><input type="radio" name="webbankpay" id="webbank_pingan" value="pingan"></span>
+					<img src="../img/confirm/bank-img22.png" width="139" height="40" title="平安银行" alt="平安银行">
+				  	<span class="bankSeltips">支持深圳发展银行</span>
+				  </dd>
+				  <dd class="">
+					<span><input type="radio" name="webbankpay" id="webbank_shenfazhan" value="shenfazhan"></span>
+					<img src="../img/confirm/bank-img32.png" width="139" height="40" title="深圳发展银行" alt="深圳发展银行">
+					  	<span class="bankSeltips">请选择平安银行付款</span>
+					  </dd>
+			 	</dl>
+			</div>
+			<div class="arrive">
+				<span class="fl rel" style="margin-top:3px;">
+		          	<label class="fb">
+		          		<a href="#"><input class="radio" type="radio" id="payment_3" name="payment" disabled="disabled"> </a>
+		          		<span class="c9">货到付款</span>
+		          	</label>
+		          	&nbsp;&nbsp;该商品所在的发货仓库不支持货到付款，请选择其他的支付方式
+		        </span>
+			</div>
+		</div>
+		<div class="mess_con">
+			<h2>确认订单信息</h2>
+			<div class="mc_main">
+				<table class="tab">
+					<tr>
+						<th class="name">商品名称</th>
+						<th class="colors">颜色</th>
+						<th class="size">尺码</th>
+						<th class="amount">数量</th>
+						<th class="sub">小计(元)</th>
+					</tr>
+				</table>
+				<div class="getcart">
+					<div class="haveshop">
+						<div class="cart">
+							<!-- <div class="title">
+								<div class="name">商品名称</div>
+								<div class="colorsize">颜色尺码</div>
+								<div class="price">单价</div>
+								<div class="amount">数量</div>
+								<div class="sub">小计</div>
+							</div> -->
+						</div>
+						<div class="temp" style="display:none;">
+							<div class="name">
+								<div class="name1"></div>
+								<div class="name2"></div>
+							</div>
+							<div class="colorsize"></div>
+							<div class="price"></div>
+							<div class="amount"></div>
+							<div class="sub"></div>
+						</div>
+					</div>
+				</div>
+				<div class="add_cheap">
+					<div class="ac_left">
+						<div class="acl_top">
+							<h5>使用优惠券: </h5>
+							<div class="inp_main">
+								<span></span>
+								<input class="inp1" type="text" placeholder="请输入线下优惠券编码" />
+							</div>
+							<button>确认</button>
+						</div>
+						<div class="acl_top" style="margin-top: 20px;">
+							<h5>使用礼品卡: </h5>
+							<div class="inp_main">
+								<span></span>
+								<input class="inp2" type="text"  placeholder="请输入线下礼品卡编码" />
+							</div>
+							<button>确认</button>
+						</div>
+						<div class="card_show1">
+							<table class="cartshow_tab">
+								<tr>
+									<td>优惠卷号</td>
+									<td>优惠券面额</td>
+									<td>最低消费</td>
+									<td>有效期</td>
+									<td style="text-align:right;"><button class="btn1" style="margin-right:10px;"></button></td>
+								</tr>
+							</table>
+							<p>抱歉，您当前账户中没有可用的优惠券，如果有线下优惠券请输入。</p>
+						</div>
+						<div class="card_show2">
+							<table class="cartshow_tab">
+								<tr>
+									<td>礼品卡卷号</td>
+									<td>礼品卡面额</td>
+									<td>最低消费</td>
+									<td>有效期</td>
+									<td style="text-align:right;"><button class="btn2" style="margin-right:10px;"></button></td>
+								</tr>
+							</table>
+							<p>抱歉，您当前账户中没有可用的优惠券，如果有线下优惠券请输入。</p>
+						</div>
+					</div>
+					<div class="ac_right">
+						<p class="all_money"><span>338</span><a>商品总金额：</a></p>
+						<p class="freight"><span>15</span><a>运费：</a></p>		
+						<p class="no_freight"><span>-15</span><a>满99元在线支付免运费：</a></p>		
+						<p class="allm"><span><a class="dolo">￥</a><span id="money_all">338</span></span><a><span>可获得优购积分：338点</span>应付金额：</a></p>
+					</div>
+				</div>
+				<div class="buy">
+					<p class="fr">
+	                    <a class="cart_back_link cblue undline" href="/order.jhtml">返回购物车</a>
+	                    <button class="cart_submitbtn ml10" type="submit" id="submi21t" name="submi21t">确认，提交订单</button>
+               		</p>
+				</div>
+			</div>
+		</div>
+		<div class="main_foot">
+			<div class="mf_right">
+				<ul>
+					<li><a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;购物保障：</a></li>
+					<li><span></span><a>100%正品</a></li>
+					<li><span class="span2"></span><a>10天退换货</a></li>
+					<li><span class="span3"></span><a>10天补差价</a></li>
+					<li style="margin:0;"><span class="span4"></span><a>请您在订单提交成功后1小时内完成支付，否则订单将被自动取消</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="foot_bot">
+			<div class="fb_left">
+				<a>购物过程中遇到任何问题，请联系在线客服</a>
+				<span></span>
+				<a class="kefu">在线客服</a>
+			</div>
+			<a style="text-decoration:underline;" class="cgray" target="_blank" href="/shoppingcart/shoppingcart_advise.jhtml">帮助我们改进购物流程</a>
+		</div>
+	</div>
+		<!-- login_footer -->
+	<div id="login_footer">
+		<div class="lf_con">
+			<p class="tright">Copyright © 2011-2014 Yougou Technology Co., Ltd.  
+			<a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备09070608号-4</a> 增值电信业务经营许可证：
+			<a href="http://www.miibeian.gov.cn" target="_blank" style="padding-left:0">粤 B2-20090203</a></p>
+		</div>
+	</div>
+</body>
+</html>

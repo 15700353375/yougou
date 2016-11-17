@@ -1,0 +1,3182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>商品详情</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/detail.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/tools.js"></script>
+	<script type="text/javascript" src="../js/detail.js"></script>
+</head>
+<body id="con">
+		<!-- index_header -->
+	<div id="index_header">
+		<div class="count_down">
+			<h3>距离剁手节还剩下：</h3>
+			<p>
+				<span></span><b>天</b>
+				<span></span><b>小时</b>
+				<span></span><b>分</b>
+				<span></span><b>秒</b>
+			</p>
+		</div>
+		<div id="headerbanner"></div>
+		<div id="hea_nav">
+			<div class="heanav_con">
+				<div class="ind_link"><a href="index.html">时尚商城</a></div>
+				<div class="ind_linkshouer"><a href="index.html">首尔站<span>Seoul Station</span></a></div>
+				<div class="phone phone_left"><a href="index.html">
+					<i class="mobile_phone"></i>
+					手机优购
+					<i class="tip tip_left"></i>
+					</a>
+					<div class="phone_con phone_con1">
+						<div class="clearfix">
+							<div class="f1 qr_code1"></div>
+							<div class="f1 qr_code2">
+								<a class="code2_a1" href="http://www.apple.com/itunes/download/" target="_blank">
+								<a class="code2_a2" href="http://mobile.yougou.com/appVersion/package.sc?channelCode=YgYougouwebA59" target="_blank">
+							</div>
+						</div>
+						<div class="code_tip">
+							下载安装
+							<strong>优购客户端</strong>
+						</div>
+					</div>
+				</div>
+				<div class="hea_login">
+					<div class="login_con">
+						<div class="register">
+							<a href="register.html">注册</a>
+						</div>
+						<div class="login">
+							<a href="login.html">登录</a>
+						</div>
+					</div>
+					<div class="login_success">
+						您好！<span></span>
+						<a class="quit" href="#">退出</a>
+					</div>
+				</div>
+				<div class="phone myy1"><a href="index.html.html">
+					我的优购
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con myug_con1">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">等待点评</a></div>
+					</div>
+				</div>
+				<div class="index_confirm">我的订单</div>
+				<div class="phone gonggao gonggao1"><a href="list.html">
+					公告
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con gonggao_pos1 pos1" style="width:200px;">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">我的收藏</a></div>
+					</div>
+				</div>
+				<div class="phone gonggao gonggao2"><a href="list.html">
+					更多
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con gonggao_pos1 pos2">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">我的收藏</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ind_logo">
+			<div class="logo">
+				<a href="index.html"></a>
+			</div>
+			<div class="ind_form">
+				<form class="ind_form_con" action="" method="get" name="formal">
+					<input class="search" type="text" name="" value="">
+					<input class="btn" type="button" value="" />
+				</form>
+				<ul class="ind_hea_list">
+					<li class="curr"><a href="http://www.yougou.com/topics/145733957764.shtml#ref=all&amp;po=hotword_hotword1" style="color:#E60012;">热销</a> |</li>
+					<li><a href="http://www.yougou.com/topics/145733957764.shtml#ref=all&amp;po=hotword_hotword1">跑步鞋</a> |</li>
+					<li><a href="http://www.yougou.com/topics/145733957764.shtml#ref=all&amp;po=hotword_hotword1">乐福鞋</a> |</li>
+					<li><a href="http://www.yougou.com/topics/145733957764.shtml#ref=all&amp;po=hotword_hotword1">徒步鞋</a> |</li>
+					<li><a href="http://www.yougou.com/topics/145733957764.shtml#ref=all&amp;po=hotword_hotword1">衬衣</a> |</li>
+					<li><a href="http://www.yougou.com/topics/145733957764.shtml#ref=all&amp;po=hotword_hotword1">T恤</a> |</li>
+					<li><a href="http://www.yougou.com/topics/145733957764.shtml#ref=all&amp;po=hotword_hotword1">小白鞋</a> |</li>
+					<li class="curr"><a href="http://www.yougou.com/topics/145733957764.shtml#ref=all&amp;po=hotword_hotword1" style="color:#E60012;">2件￥99</a> |</li>
+					<li><a href="http://www.yougou.com/topics/145733957764.shtml#ref=all&amp;po=hotword_hotword1">秋款上新</a> |</li>
+					<li><a href="http://www.yougou.com/topics/145733957764.shtml#ref=all&amp;po=hotword_hotword1">专柜同款</a></li>
+				</ul>
+			</div>
+			<div class="ind_car">
+				<div class="mycar">
+					<div class="tip_left"></div>
+					<div class="mycar_con">
+						<a href="cart.html">购物车(<span id="pordcount">0</span>)</a>
+					</div>
+					<div class="tip_right"></div>
+				</div>
+				<div class="car_con phone_con">
+					您的购物车中还没有任何商品！
+				</div>
+				<p>百丽国际旗下购物网站</p>
+			</div>
+		</div>
+	</div>
+		<!-- index_nav -->
+	<div id="index_nav" >
+		<div class="nav_con">
+			<div class="nav_con_left">
+				<a class="ncl_tit" href="list.html" target="_blank"></a>
+			</div>
+			<div class="phone_con mian_nav"  style="display:none;" >
+				<ul class="classnav">
+					<li class="classnav1">
+						<div class="titt">
+							<i class="tit-bg bg1"></i>
+							<h3><a href="list.html" target="_blank">运动</a></h3>
+						</div>
+						<p class="childlist">
+							<a href="list.html" target="_blank">运动鞋</a>
+							<a href="list.html" target="_blank">夹克</a>
+							<a href="list.html" target="_blank">长裤</a>
+							<a href="list.html" target="_blank">运动包</a>
+						</p>
+						
+					</li>
+					<li>
+						<div class="titt">
+							<i class="tit-bg bg2"></i>
+							<h3><a href="list.html" target="_blank">户外</a></h3>
+						</div>
+						<p class="childlist">
+							<a href="list.html" target="_blank">女鞋/男鞋</a>
+							<a href="list.html" target="_blank">夹克</a>
+							<a href="list.html" target="_blank">长裤</a>
+							<a href="list.html" target="_blank">运动包</a>
+						</p>
+					</li>
+					<li>
+						<div class="titt">
+							<i class="tit-bg bg3"></i>
+							<h3><a href="list.html" target="_blank">女鞋/男鞋</a></h3>
+						</div>
+						<p class="childlist">
+							<a href="list.html" target="_blank">运动鞋</a>
+							<a href="list.html" target="_blank">夹克</a>
+							<a href="list.html" target="_blank">长裤</a>
+							<a href="list.html" target="_blank">运动包</a>
+						</p>
+					</li>
+					<li>
+						<div class="titt">
+							<i class="tit-bg bg4"></i>
+							<h3>
+							<a href="list.html" target="_blank">男装/</a>
+							<a href="list.html" target="_blank">女装</a></h3>
+						</div>
+						<p class="childlist">
+							<a href="list.html" target="_blank">运动鞋</a>
+							<a href="list.html" target="_blank">夹克</a>
+							<a href="list.html" target="_blank">长裤</a>
+							<a href="list.html" target="_blank">运动包</a>
+						</p>
+					</li>
+					<li>
+						<div class="titt">
+							<i class="tit-bg bg5"></i>
+							<h3><a href="list.html" target="_blank">童装/童鞋</a></h3>
+						</div>
+						<p class="childlist">
+							<a href="list.html" target="_blank">运动鞋</a>
+							<a href="list.html" target="_blank">夹克</a>
+							<a href="list.html" target="_blank">长裤</a>
+							<a href="list.html" target="_blank">运动包</a>
+						</p>
+					</li>
+					<li>
+						<div class="titt">
+							<i class="tit-bg bg6"></i>
+							<h3><a href="list.html" target="_blank">箱包/配饰</a></h3>
+						</div>
+						<p class="childlist">
+							<a href="list.html" target="_blank">运动鞋</a>
+							<a href="list.html" target="_blank">夹克</a>
+							<a href="list.html" target="_blank">长裤</a>
+							<a href="list.html" target="_blank">运动包</a>
+						</p>
+					</li>
+					<li>
+						<div class="titt">
+							<i class="tit-bg bg7"></i>
+							<h3><a href="list.html" target="_blank">首尔站</a></h3>
+						</div>
+						<p class="childlist">
+							<a href="list.html" target="_blank">运动鞋</a>
+							<a href="list.html" target="_blank">夹克</a>
+							<a href="list.html" target="_blank">长裤</a>
+							<a href="list.html" target="_blank">运动包</a>
+						</p>
+					</li>
+				</ul>
+				<div class="classnav_con">
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">运动鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                          
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">运动鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                          
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">运动鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                          
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">运动鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                        </p>
+							</div>
+						</div>
+						<div class="classnav_con" >
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">户外</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">运动鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">运动鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                          
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">运动鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                          
+		                        </p>
+							</div>
+						</div>
+						<div class="classnav_con" >
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">男鞋女鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                          
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">男鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                          
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">女鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                        </p>
+							</div>
+						</div>
+						<div class="classnav_con" >
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">男装女装</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">男装</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">女装</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">情侣装</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                        </p>
+							</div>
+						</div>
+						<div class="classnav_con" >
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">童装</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                          
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">童鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">运动鞋</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                        </p>
+							</div>
+						</div>
+						<div class="classnav_con" >
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">箱包</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                          
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">首尔</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                          
+		                        </p>
+							</div>
+							<div class="class_child">
+								<h4><a href="list.html" target="_blank" style="margin-left: 0px;">首尔饰品</a>
+								</h4>
+								<p class="categoryul">
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                豆豆鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: #f01818;">
+		                                浅口鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                鱼嘴鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                防水台
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                满帮鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                细高跟
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank">
+		                                洞洞鞋
+		                              </a>
+		                          
+		                              <a href="list.html" target="_blank" style="color: ##FF0000;">
+		                                运动风
+		                              </a>
+		                        </p>
+							</div>
+						</div>
+
+			</div>
+			
+			<div class="nav_con_right">
+				<ul class="navr-list">
+					<li>
+						<a href="list.html" target="_blank">运动馆</a>
+					</li>
+					<li>
+						<a href="list.html" target="_blank">户外馆 </a>
+					</li>
+					<li>
+						<a href="list.html" target="_blank"> 鞋靴馆 </a>
+					</li>
+					<li>
+						<a href="detail.html" target="_blank">服装馆 </a>
+					</li>
+					<li>
+						<a href="list.html">母婴童 </a>
+					</li>
+					<li><a href="list.html" target="_blank">
+			          首尔站</a>
+			        </li>
+			        <li class="fr"><a href="list.html" target="_blank">聚优购 </a>
+			        </li>
+			        <li class="fr"><a href="list.html" target="_blank"> 秒杀</a>
+			        </li>
+			        <li class="fr">
+						<div class="fr_tip"></div>
+			        <a style="color:#e60012;" class="highlight" href="list.html" target="_blank">分享购 </a>
+			        </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		<!-- woman_class -->
+	<div id="place">
+		<div class="p_hea">
+			<span id="ph_tit">您当前位置：</span>
+			<a href="/?t=14752952429793325">首页</a>>
+			<a href="/f-0-63L-0-0.html?t=14752952429796735">女装</a>>
+			<a href="/f-0-63L_I8E-0-0.html?t=14752952429797730">女装上装</a>>
+			<a href="/f-0-63L_I8E_IOB-0-0.html?t=14752952429792737">针织衫</a>
+			 &gt; 佐丹奴Giordano2016秋季女 厚实人字织花牛角袖圆领套头针织衫05355520001 
+		</div>
+		<div class="m_body"></div>
+	</div>
+
+		<!-- relative -->
+	<div id="relative">
+		<div class="rel_left">
+			<div class="middle_box">
+				<div class="middle_pic" style="display:block;" >
+					<img src="../img/detail/100490715_01_m.jpg" alt=""/>
+					<img src="../img/detail/100490715_02_m.jpg" alt=""  />
+					<img src="../img/detail/100490715_03_m.jpg" alt="" />
+					<img src="../img/detail/100490715_04_m.jpg" alt="" />
+					<img src="../img/detail/100490715_05_m.jpg" alt="" />
+					<div class="pop"></div>
+				</div>
+				<div class="middle_pic" >
+					<img src="../img/detail/100490713_01_m.jpg" alt="" />
+					<img src="../img/detail/100490713_02_m.jpg" alt="" />
+					<img src="../img/detail/100490713_03_m.jpg" alt="" />
+					<img src="../img/detail/100490713_04_m.jpg" alt="" />
+					<img src="../img/detail/100490713_05_m.jpg" alt="" />
+					<img src="../img/detail/100490713_06_m.jpg" alt="" />
+					<img src="../img/detail/100490713_07_m.jpg" alt="" />
+					<div class="pop"></div>
+				</div>
+				<div class="middle_pic">
+					<img src="../img/detail/100490711_01_m.jpg" alt="" />
+					<img src="../img/detail/100490711_02_m.jpg" alt="" />
+					<img src="../img/detail/100490711_03_m.jpg" alt="" />
+					<img src="../img/detail/100490711_04_m.jpg" alt="" />
+					<img src="../img/detail/100490711_05_m.jpg" alt="" />
+					<img src="../img/detail/100490711_06_m.jpg" alt="" />
+					<img src="../img/detail/100490711_07_m.jpg" alt="" />
+					<div class="pop"></div>
+				</div>
+				<div class="middle_pic">
+					<img src="../img/detail/100490716_01_m.jpg" alt="" />
+					<img src="../img/detail/100490716_02_m.jpg" alt="" />
+					<img src="../img/detail/100490716_03_m.jpg" alt="" />
+					<img src="../img/detail/100490716_04_m.jpg" alt="" />
+					<img src="../img/detail/100490716_05_m.jpg" alt="" />
+					<img src="../img/detail/100490716_06_m.jpg" alt="" />
+					<img src="../img/detail/100490716_07_m.jpg" alt="" />
+					<div class="pop"></div>
+				</div>
+			</div>
+			<div class="small_box">
+				<div class="small_pic" style="display:block;">
+					<span><a></a><img src="../img/detail/100490715_01_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490715_02_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490715_03_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490715_04_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490715_05_t.jpg" alt="" /></span>
+				</div>
+				<div class="small_pic">
+					<span><a></a><img src="../img/detail/100490713_01_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490713_02_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490713_03_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490713_04_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490713_05_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490713_06_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490713_07_t.jpg" alt="" /></span>
+				</div>
+				<div class="small_pic">
+					<span><a></a><img src="../img/detail/100490711_01_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490711_02_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490711_03_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490711_04_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490711_05_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490711_06_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490711_07_t.jpg" alt="" /></span>
+				</div>
+				<div class="small_pic">
+					<span><a></a><img src="../img/detail/100490716_01_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490716_02_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490716_03_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490716_04_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490716_05_t.jpg" alt="" /></span>
+					<span><a></a><img src="../img/detail/100490716_06_t.jpg" alt="" /></span>
+				</div>
+			</div>
+			<div class="pic_num">商品编号：100490715
+				<span class="collection"><i class="pn2"></i>收藏</span>
+				<span class="share"><i class="pn1"></i>分享</span>
+			</div>
+		</div>
+		<div class="rel_center">
+			<div class="big_box">
+				<div class="big_pic">
+					<img src="../img/detail/100490715_01_l.jpg" alt="" style="display:block;" />
+					<img src="../img/detail/100490715_02_l.jpg" alt="" />
+					<img src="../img/detail/100490715_03_l.jpg" alt="" />
+					<img src="../img/detail/100490715_04_l.jpg" alt="" />
+					<img src="../img/detail/100490715_05_l.jpg" alt="" />
+				</div>
+				<div class="big_pic">
+					<img src="../img/detail/100490713_01_l.jpg" alt="" style="display:block;"/>
+					<img src="../img/detail/100490713_02_l.jpg" alt="" />
+					<img src="../img/detail/100490713_03_l.jpg" alt="" />
+					<img src="../img/detail/100490713_04_l.jpg" alt="" />
+					<img src="../img/detail/100490713_05_l.jpg" alt="" />
+					<img src="../img/detail/100490713_06_l.jpg" alt="" />
+					<img src="../img/detail/100490713_07_l.jpg" alt="" />
+				</div>
+				<div class="big_pic">
+					<img src="../img/detail/100490711_01_l.jpg" alt="" style="display:block;"/>
+					<img src="../img/detail/100490711_02_l.jpg" alt="" />
+					<img src="../img/detail/100490711_03_l.jpg" alt="" />
+					<img src="../img/detail/100490711_04_l.jpg" alt="" />
+					<img src="../img/detail/100490711_05_l.jpg" alt="" />
+					<img src="../img/detail/100490711_06_l.jpg" alt="" />
+					<img src="../img/detail/100490711_07_l.jpg" alt="" />
+				</div>
+				<div class="big_pic">
+					<img src="../img/detail/100490716_01_l.jpg" alt="" style="display:block;"/>
+					<img src="../img/detail/100490716_02_l.jpg" alt="" />
+					<img src="../img/detail/100490716_03_l.jpg" alt="" />
+					<img src="../img/detail/100490716_04_l.jpg" alt="" />
+					<img src="../img/detail/100490716_05_l.jpg" alt="" />
+					<img src="../img/detail/100490716_06_l.jpg" alt="" />
+					<img src="../img/detail/100490716_07_l.jpg" alt="" />
+				</div>
+			</div>
+			<h1>佐丹奴Giordano2016秋季女 厚实人字织花牛角袖圆领套头针织衫05355520001</h1>
+			<p><a class="" target="_blank" href="http://www.yougou.com/giordano-brand.html#ref=detail&amp;po=more">更多Giordano/佐丹奴商品&gt;&gt;</a></p>
+			<div class="rel_price">
+				<span>&nbsp;&nbsp;￥<a href="#">169</a>&nbsp;</span>
+				<del>￥290</del>
+				<strong>&nbsp;&nbsp;&nbsp;&nbsp;不支持使用优惠劵</strong>
+			</div>
+			<div class="cmnt">
+				商品评分：<span></span><a href="#goodsBar1" class="Blue">已有0人点评</a>
+				<div class="refer">
+					<i></i>
+					<a href="jivascript:void(0);">在线咨询</a>
+				</div>
+			</div>
+			<div class="pic_chose">
+				<div class="color_chose">
+					<span>颜色</span>
+						 <a class="select" href="javascript:void(0)" data-name="双绞标志海军蓝/皎雪色一"> 
+					          <img width="40" height="40" src=../img/detail/100490715_01_c.jpg?2" alt="双绞标志海军蓝/皎雪色一" midpic="http://i1.ygimg.cn/pics/giordano/2016/100490715/100490715_01_s.jpg?2"> <i class="picon"></i>
+					          <div class="hover_img"><img src="../img/detail/100490715_01_s.jpg"/></div>
+				        </a>
+						<a href="#" data-name="双绞摩洛哥蓝/皎雪白色"> 
+					         <img width="40" height="40" src="../img/detail/100490713_01_c.jpg?3" alt="双绞摩洛哥蓝/皎雪白色" midpic="http://i1.ygimg.cn/pics/giordano/2016/100490713/100490713_01_s.jpg?3"> <i class="picon"></i>
+					         <div class="hover_img"><img src="../img/detail/100490713_01_s.jpg"/></div>
+				        </a>
+						<a href="javascript:void(0)" data-name="双绞石榴红/皎雪白色一"> 
+					         <img width="40" height="40" src="../img/detail/100490711_01_c.jpg?3" alt="双绞石榴红/皎雪白色一" midpic="http://i2.ygimg.cn/pics/giordano/2016/100490711/100490711_01_s.jpg?3"> <i class="picon"></i>
+					         <div class="hover_img"><img src="../img/detail/100490711_01_s.jpg"/></div>
+				        </a>
+						<a href="javascript:void(0)" data-name="双绞卵石杏/皎雪色"> 
+					         <img width="40" height="40" src="../img/detail/100490716_01_c.jpg?3" alt="双绞卵石杏/皎雪色" midpic="http://i2.ygimg.cn/pics/giordano/2016/100490716/100490716_01_s.jpg?3"> <i class="picon"></i>
+					         <div class="hover_img"><img src="../img/detail/100490716_01_s.jpg"/></div>
+				        </a>
+				</div>
+				<div class="no_size">
+					<h2>您尚未选择尺码<a href="#"><span></span>关闭</a></h2>
+					<div class="size_chose no-schose">
+						<span>尺码</span>
+						<a href="#">S <span></span></a>
+						<a href="#">M<span></span></a>
+						<a href="#">L<span></span></a>
+						<a href="#">XL<span></span></a>
+					</div>
+					<div class="chose_size"><a href="#">确定</a></div>
+				</div>
+				<div class="size_chose">
+					<span>尺码</span>
+					<a href="#">S <span></span></a>
+					<a href="#">M<span></span></a>
+					<a href="#">L<span></span></a>
+					<a href="#">XL<span></span></a>
+				</div>
+				<div class="amount_con">
+					<span>数量</span>
+					<a class="minus"></a>
+					<input class="amount" type="text" value="1" />
+					<a class="add"></a>
+					<span>已选择</span>
+					<span style="color:#f00;">&nbsp;&nbsp;双绞标志海军蓝/皎雪色一S</span>
+				</div>
+				<div class="qbuy">
+					<a id="buyNow" class="lj2" href="javascript:void(0)">立即购买</a>
+					<a id="addShoppingCart" class="ks2 addShoppingCart" href="javascript:void(0)">加入购物车</a> 
+				</div>
+				<div class="weixin">
+					<span>&nbsp;&nbsp;下载优购客户端</span>
+					<img src="../img/detail/qrcode.png" alt="" />
+					<span>更多手机专享优惠</span>
+				</div>
+			</div>
+			<p style="color:#666;">&nbsp;&nbsp;本商品由<span style="color:#000;">品牌商</span>直接发货</p>
+			<div class="prd">
+				<span>服务承诺</span>
+				<ul class="clearfix">
+					<li class="promise1"><i class="fl fl1"></i> <a href="http://www.yougou.com/help/aboutus.html" target="_blank" rel="nofollow">正品保证</a></li>
+					<li class="promise2"><i class="fl fl2"></i> <a  href="http://www.yougou.com/help/returnpolicy.html" target="_blank" rel="nofollow">10天退换货</a></li>
+					<li class="promise3"><i class="fl fl3"></i> <a href="http://www.yougou.com/help/priceprotection.html" target="_blank" rel="nofollow">10天补差价</a></li>
+				</ul>
+			</div>
+			<div class="shade">
+				<div class="shade_con"></div>
+				<div class="clickbuy">
+					<div class="switch"><span>关闭</span></div>
+					<div class="click_tit"><img src="../img/detail/ubg14.png"><span>商品已加入购物车中！</span></div>
+					<div class="cbuy_con">
+						<h5>您的购物车中共有
+							<span class="total_amount"></span>件商品，金额共计
+							<span class="total_cart"></span>元
+						</h5>
+						<div class="jiesuan">
+							<span class="jies"></span>
+							<a href="detail.html">继续购物>></a>
+						</div>
+						<p>倒计时<span class="second"></span>秒后自动关闭</p>
+					</div>
+					<div class="pp1">购买该商品的用户还购买了
+						<a href="#">换几个更好的</a>
+					</div>
+					<div class="about_pic">
+						<div class="pic_box0">
+							<img src="../img/detail/11 (1).jpg" alt="" />
+							<p>￥229</p>
+						</div>
+						<div class="pic_box0">
+							<img src="../img/detail/11 (2).jpg" alt="" />
+							<p>￥269</p>
+						</div>
+						<div class="pic_box0">
+							<img src="../img/detail/11 (3).jpg" alt="" />
+							<p>￥129</p>
+						</div>
+						<div class="pic_box0">
+							<img src="../img/detail/11 (4).jpg" alt="" />
+							<p>￥289</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="rel_right">
+			<hr />
+			<div class="look">看了又看</div>
+				<div class="look_box">
+					<div class="look_con">
+						<ul class="look_show li">
+							<li>
+								<img src="../img/detail/100490716_01_s.jpg" alt="" />
+								<a class="ls_tit">
+									佐丹奴
+									<span>￥169</span>
+								</a>
+							</li>
+							<li>
+								<img src="../img/detail/100490726_01_s.jpg" alt="" />
+								<a class="ls_tit">
+									佐丹奴
+									<span>￥169</span>
+								</a>
+							</li>
+							<li>
+								<img src="../img/detail/100486163_01_s.jpg" alt="" />
+								<a class="ls_tit">
+									佐丹奴
+									<span>￥169</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="look_show li">
+							<li>
+								<img src="../img/detail/100490716_01_s.jpg" alt="" />
+								<a class="ls_tit">
+									佐丹奴
+									<span>￥169</span>
+								</a>
+							</li>
+							<li>
+								<img src="../img/detail/100490726_01_s.jpg" alt="" />
+								<a class="ls_tit">
+									佐丹奴
+									<span>￥169</span>
+								</a>
+							</li>
+							<li>
+								<img src="../img/detail/100486163_01_s.jpg" alt="" />
+								<a class="ls_tit">
+									佐丹奴
+									<span>￥169</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="look_show li">
+							<li>
+								<img src="../img/detail/100490716_01_s.jpg" alt="" />
+								<a class="ls_tit">
+									佐丹奴
+									<span>￥169</span>
+								</a>
+							</li>
+							<li>
+								<img src="../img/detail/100490726_01_s.jpg" alt="" />
+								<a class="ls_tit">
+									佐丹奴
+									<span>￥169</span>
+								</a>
+							</li>
+							<li>
+								<img src="../img/detail/100486163_01_s.jpg" alt="" />
+								<a class="ls_tit">
+									佐丹奴
+									<span>￥169</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			<div class="updown">
+				<div class="up"></div>
+				<div class="down"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- d_container -->
+	<div class="d_container">
+		<div class="dc_tit">
+			<strong>&nbsp;&nbsp;看过本商品的用户最终购买</strong>
+			<div class="dc_pages">第<span>1</span>页，共4页</div>
+		</div>
+		<div class="cc_prev cc1"></div>
+		<div class="cc_next cc1"></div>
+		<div class="clo_con clon1" style="overflow:hidden;">
+			<div class="clothes">
+				<ul class="li">
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05355520001-100490715.shtml#ref=list&amp;po=list">
+									<sup no="100490715" class="mark_small_100490715 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实人字织花牛角袖圆领套头针织衫05355520001" src="../img/list/100490715_01_mb.jpg?2">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05355520001-100490715.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实人字织花牛角袖圆领套头针织衫05355520001">佐丹奴Giordano2016秋季女 厚实人字织花牛角袖圆领套头针织衫</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>169</strong></span>
+									<del>¥290</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="li">
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="li">
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="li">
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+		<!-- index_container -->
+	<div id="index_container">
+		<div class="ic_left">
+			<div class="ic_nav">
+				<a class="curr" style="border-left:1px solid #ccc;" href="javascript:void(0)" >商品详情</a>
+				<a href="javascript:void(0)" >商品点评<em id="comment_count" class="ygprc14"><i></i></em></a> 
+				<a href="javascript:void(0)" >购物保障<i class="newtip"></i></a> 
+				<a href="javascript:void(0)" >退换货无忧</a>
+				<a href="javascript:void(0)" >支付与配送</a>
+				<a href="javascript:void(0)" >如何保养</a>
+			</div>
+			<div class="icl_con">
+				<div class="det1">
+					<div class="det1_con">
+						<div class="det1_top">
+							<table class="detail_table">
+								<tbody><tr>
+									<td class="td1">服装图案：</td>
+									<td class="td2">纯色</td>        
+									<td class="td1">色系：</td>
+									<td class="td2">拼色</td>       
+								</tr>
+								<tr>
+									 
+									<td class="td1">衣门襟：</td>
+									<td class="td2">单排扣</td>        
+									<td class="td1">性别：</td>
+									<td class="td2">女子</td>       
+								</tr>
+								<tr>
+									 
+									<td class="td1">厚薄：</td>
+									<td class="td2">常规</td>        
+									<td class="td1">服装长度：</td>
+									<td class="td2">常规款（55-65CM）</td>       
+								</tr>
+								<tr>
+									 
+									<td class="td1">领子：</td>
+									<td class="td2">半高圆领</td>        
+									<td class="td1">颜色分类：</td>
+									<td class="td2">蓝色</td>       
+								</tr>
+								<tr>
+									 
+									<td class="td1">领型：</td>
+									<td class="td2">圆领</td>        
+									<td class="td1">服装袖长：</td>
+									<td class="td2">长袖</td>       
+								</tr>
+								<tr>
+									 
+									<td class="td1">适用年龄：</td>
+									<td class="td2">18-24周岁30-34周岁25-29周岁</td>        
+									<td class="td1">服装薄厚：</td>
+									<td class="td2">适中</td>   
+								</tr></tbody>
+							</table>
+						</div>
+						<div class="det1_pic">
+							<img border="0" src="../img/detail/9d8fd8ae9de5492ab10a5b027a97ec2e.jpg?76" width="790" height="350" usemap="#FPMap1">
+							<img border="0" src="../img/detail/be4b3aeca8ab4a2594e8fd342205eb4a.jpg?22" width="790" height="300" usemap="#FPMap0">
+							<p align="center">
+							   <img src="../img/detail/100490715_01_b.jpg?2" style="line-height:1.5;"> 
+							</p>
+						</div>
+					</div>
+					<div class="det1p_bottom">
+						<p><span class="ff_yh mr20">¥169</span>即销售价或因开展不同的优惠活动而设定的即时售价</p>
+						<p><span class="ff_yh mr20">¥290</span>品牌商建议零售价或牌价</p>
+					</div>
+					<div class="conmment">
+						<a href="javascript:void(0)">商品点评</a> 
+						<span>购买过该商品的用户才能进行评论</span>
+					</div>
+					<div class="conmment_con">
+						<p>该商品暂无点评。</p>
+						<div class="view"><strong>赶快来发表第一个点评吧！</strong><span>我要写点评</span></div>
+						<p class="agree"><a class="cblue" target="_blank" href="http://www.yougou.com/review-100490715_0.html">[查看更多商品评论]</a></p>
+					</div>
+					<div class="conmment">
+						<a href="javascript:void(0)">购物保障</a> 
+					</div>
+					<div class="bz_con">
+						<ul class="bz_list">
+							<li class="li1">
+								<div class="li_left left1"></div>
+								<div class="li-right">
+									<h2>正品保证</h2>
+									<h6>诚信为本，优购销售的商品均为品牌商直接供货</h6>
+									<p>优购为百丽集团旗下时尚及运动鞋服类购物网站，始终坚持优质正品的品牌理念，以用户体验、服务至上为宗旨，依托投资方百丽国际强大的供应链、资金及品牌优势，经营范围涉及"男鞋、女鞋、男装、女装、运动、户外、童鞋、箱包" 八大品类，涵盖百丽、天美意、莱尔斯丹、fed、哈森、森达、季候风、OZZO、利郎、耐克、阿迪达斯、CAT、哥伦比亚等数百个知名品牌，数十万款商品。</p>
+								</div>
+							</li>
+							<li class="li1 li2">
+								<div class="li_left left2"></div>
+								<div class="li-right">
+									<h2>10天退换货服务</h2>
+									<h6>优购为您提供10天（自签收之日起）退换货服务，让您购物无风险</h6>
+									<table class="goods_lc_table1 thfw_table">
+							          <colgroup>
+							            <col width="50%">
+							            <col width="50%">
+							          </colgroup>
+							          <thead>
+							          <tr>
+							            <th>以下情况可办理退换货</th>
+							            <th>以下情况不可办理退换货</th>
+							          </tr>
+							          </thead>
+							          <tbody>
+							          <tr>
+							            <td><div class="kth">商品不满意可退换</div></td>
+							            <td><div class="bkth">超过10天有效期不可退换</div></td>
+							          </tr>
+							          <tr>
+							            <td><div class="kth">尺码不适合可退换</div></td>
+							            <td><div class="bkth">商品无法二次销售不可退换</div></td>
+							          </tr>
+							          <tr>
+							            <td><div class="kth">质量问题可退换</div></td>
+							            <td><div class="bkth">鞋盒损坏、粘绑胶带不可退换</div></td>
+							          </tr>
+							          <tr>
+							            <td><div class="kth">配送错误可退换</div></td>
+							            <td><div class="bkth">商品相关附件丢失不可退换</div></td>
+							          </tr>
+							          </tbody>
+							        </table>
+							        <p class="li2_p"><span>温馨提示：</span>退换货时请将购物凭证随货寄回，并填写相关信息
+							        <a href="http://www.yougou.com/help/returnprocess.html" target="_blank" class="show_dtl Blue">点击查看售后服务详细说明&gt;&gt;</a>
+							        </p>
+								</div>
+							</li>
+							<li class="li1 li3">
+								<div class="li_left left3"></div>
+								<div class="li-right">
+									<h2>10天调价补差价</h2>
+									<h6>优购网商品售价（优购价）因季节等因素发生变化时，将给予顾客10天补差价</h6>
+									<p>即：在订单签收起10日内，如订单内商品降价(优购价降价)，您可以通过售后热线、在线客服、客服邮箱等方式申请价保，我们会在接到申请后，将您申请时的价格与您订购商品的价格差以礼品卡的形式予以返还。</p>
+							        <p class="li2_p"><span>温馨提示：</span>退换货时请将购物凭证随货寄回，并填写相关信息
+							        </p>
+							        <h5>价保原则如下：</h5>
+							        <table class="goods_lc_table2">
+							            <colgroup>
+							              <col width="17%">
+							              <col width="20%">
+							              <col width="15%">
+							              <col width="48%">
+							            </colgroup>
+							            <thead>
+							            <tr>
+							              <th>什么时候申请？</th>
+							              <th>怎么申请？</th>
+							              <th>怎么返还？</th>
+							              <th>补差礼品卡使用规则</th>
+							            </tr>
+							            </thead>
+							            <tbody>
+							            <tr>
+							              <td>签收之日起10天内</td>
+							              <td>
+							                <ol class="ol_list">
+							                  <li>1、联系售后热线申请</li>
+							                  <li>2、联系在线客服申请<br><a class="lnk-ntalker Blue" onclick="javascript:NTKF.im_openInPageChat();" title="在线咨询"><span style="display:block;width:20px;
+							                  height:20px;background:url(../img/detail/new_dpico.png) no-repeat 0 -188px;float:left;margin-left:15px;"></span>在线咨询</a></li>
+							                  <li>3、发送客服邮箱申请<br><span class="Blue" style="color:#36c;">service@yougou.com</span></li>
+							                </ol>
+							              </td>
+							              <td>差价以礼品卡的形式予以返还</td>
+							              <td>
+							                <ol class="ol_list">
+							                  <li>1、礼品卡通常不受网站促销活动限制，可与优惠券同时使用（每张订单只能使用一张优惠券和一张礼品卡）</li>
+							                  <li>2、已享受补差的商品如发生退货，我司将作废礼品卡或直接从商品退款中扣除同等礼品卡金额</li>
+							                  <li>注：此规则从2012年12月5日起执行</li>
+							                </ol>
+							              </td>
+							            </tr>
+							            </tbody>
+							         </table>
+							         <h5>不享受十天补差声明：</h5>
+							         <p>
+							         	1、换货商品不享受十天补差价；<br/>
+										2、秒杀、团购商品不享受十天补差；<br/>
+										3、差价在5元或以下的不享受十天补差；<br/>
+										4、购买时包含赠品的商品不享受十天补差；<br/>
+										5、有售馨、断码标识、已下架的商品不享受十天补差价；<br/>
+										6、如订单使用优惠券，申请退差后达不到优惠券使用条件的不享受十天补差；<br/>
+										7、涉及全场活动，如：套餐组合、加价换购、满减、多件折等促销活动不享受十天补差；<br/>
+										8、在线支付订单的部分商品补差剩余金额不满99元，按照订单99元免运费条件，需扣除15元运费计算补差。
+									</p>
+								</div>
+							</li>
+							<li class="li1 li4">
+								<div class="li_left left1"></div>
+								<div class="li-right">
+									<h2>7×24小时贴心客服</h2>
+									<p>优购客服中心为您提供<span>7×24小时全年无休</span>的优质服务</p>
+									<p>如果您有任何问题，欢迎与我们联系。</p>
+									<p>客服邮箱：<strong>service@yougou.com</strong></p>
+								</div>
+							</li>
+						</ul>
+						<dl class="goods_lc_dl1">
+						      <dt>公司展示</dt>
+						      <dd><img src="http://i1.ygimg.cn/pics/shop/zt/yun_dong/20160128/goods_detail_img1.jpg"></dd>
+						      <dt>媒体报道</dt>
+						      <dd>
+						        <p>优购从2011年7月上线以来，历时多年的发展，依托百丽国际投资背景，凭借优质、时尚货品资源，新货占比量在70%以上，其快速发展历程也受到来自各大媒体的关注与聚焦。</p>
+						        <p class="news mt10">
+						          <a href="http://news.sohu.com/20141111/n405945373.shtml" target="_blank" class="f_blue">优购及百丽电商双十一截止上午11：00已过50万单</a>
+						          <a href="http://finance.qq.com/a/20141105/003228.htm" target="_blank" class="f_blue">“双十一”百丽国际给钱给货给人</a>
+						          <a href="http://www.ebrun.com/20140924/111069.shtml" target="_blank" class="f_blue">优购将推自有品牌运动鞋</a>
+						          <a href="http://epaper.jinghua.cn/html/2014-08/06/content_111623.htm" target="_blank" class="f_blue">优购周年庆推出每日免单</a>
+						          <a href="http://www.chinadaily.com.cn/hqcj/xfly/2014-10-23/content_12582522.html" target="_blank" class="f_blue">10月优购时尚商城大规模引进美国牛仔品牌LEE</a>
+						        </p>
+						        <p class="mt20 ml40"><img src="http://i2.ygimg.cn/pics/shop/zt/yun_dong/20160128/danpin_8_1.jpg"></p>
+						      </dd>
+						      <dt>热点问题</dt>
+						      <dd>
+						        <h5>订单生成后如何修改订单：</h5>
+						        <p>您的订单生成后，所有订单信息您将无法自行修改，如需修改可通过以下两种方式进行操作：<br>方法一：自主取消订单后重新订购商品<br>方法二：联系客服人员修改订单</p>
+						        <h5 class="mt20">如何查询订单配送情况：</h5>
+						        <p>订单发货后，无需致电客服查询物流进度，大约48小时后，自主登录优购网——“我的订单”中了解快递配送进度。</p>
+						        <h5 class="mt20">签收商品时，您需要注意的是：</h5>
+						        <p>第一步：检查物流包装、“优购安全封条”是否完好<br>第二步：开箱验货<br>第三步：1. 满意后再签收</p>
+						        <p style="margin-left:48px;"> 2. 商品不满意/存在质量问题：直接拒收</p>
+						        <p style="margin-left:48px;"> 3. 缺少商品，直接拒收</p>
+						      </dd>
+						</dl>
+						<div class="good_issue">
+					      <dl>
+					        <dt><i class="ico_clr"></i>关于色差</dt>
+					        <dd>因拍照、灯光、各显示器显示效果不同等原因，实物与图片显示可能会有微弱色差，实际颜色以您收到的商品为准，色差问题不属于质量问题。</dd>
+					      </dl>
+					      <dl>
+					        <dt><i class="ico_size"></i>关于尺码</dt>
+					        <dd>因品牌尺码体系，鞋型及测量方法不同，商品实际尺码与我们提供的数据可能存在细微的差别，属正常现象，请您保留最终决定权。</dd>
+					      </dl>
+					      <dl>
+					        <dt><i class="ico_time"></i>关于发货</dt>
+					        <dd>由优购直接出库在线支付订单最快会在24小时内为您安排出库，系统会根据收货地址、商品库存等因素自动分配最近的仓库配送。</dd>
+					      </dl>
+					      <dl>
+					        <dt><i class="ico_truck"></i>物流公司</dt>
+					        <dd>优购目前不支持指定快递，系统会根据填写的收货地址自动分配圆通，申通，中通、通路、微特派等快递进行派送，客户在48小时后，自主登录优购网——“我的订单”中了解快递配送进度。</dd>
+					      </dl>
+					    </div>
+					</div>
+				</div>
+				<div class="det2 det"><img src="../img/detail/cart1.jpg"></div>
+				<div class="det3 det"><img src="../img/detail/cart2.jpg"></div>
+				<div class="det4 det"><img src="../img/detail/cart3.jpg"></div>
+				<div class="det5 det"><img src="../img/detail/cart4.jpg"></div>
+				<div class="det6 det"><img src="../img/detail/cart5.jpg"></div>
+			</div>
+		</div>
+		<div class="ic_right">
+			<div class="icr_top">
+				<h2>其它相似商品</h2>
+				<ul class="clos">
+					<li>
+				<dl>
+					<dt>
+						<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+							<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙 韩国 首尔站" src="../img/list/100316519_01_mb.jpg">
+						</a>
+					</dt>
+					<dd>
+						<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉条纹圆领长袖T恤</a></p>
+						<h6>
+							<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+							<del>¥230</del>
+						</h6>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>
+						<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+							<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+							<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100339833_01_mb.jpg">
+						</a>
+					</dt>
+					<dd>
+						<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉条纹圆领长袖T恤</a></p>
+						<h6>
+							<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+							<del>¥230</del>
+						</h6>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>
+						<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+							<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100399937_01_mb.jpg">
+						</a>
+					</dt>
+					<dd>
+						<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉条纹圆领长袖T恤</a></p>
+						<h6>
+							<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+							<del>¥230</del>
+						</h6>
+					</dd>
+				</dl>
+			</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div class="icr_center">
+				<h2>购买了该商品的用户还购买了</h2>
+				<ul class="clos">
+				<li>
+				<dl>
+					<dt>
+						<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+							<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100214239_01_mb.jpg">
+						</a>
+					</dt>
+					<dd>
+						<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T</a></p>
+						<h6>
+							<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+							<del>¥230</del>
+						</h6>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>
+						<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+							<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100253152_01_mb.jpg">
+						</a>
+					</dt>
+					<dd>
+						<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉条纹圆领长袖T恤</a></p>
+						<h6>
+							<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+							<del>¥230</del>
+						</h6>
+					</dd>
+				</dl>
+			</li>
+				<li>
+				<dl>
+					<dt>
+						<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+							<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+							<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+						</a>
+					</dt>
+					<dd>
+						<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉条纹圆领长袖T恤</a></p>
+						<h6>
+							<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+							<del>¥230</del>
+						</h6>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>
+						<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+							<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+						</a>
+					</dt>
+					<dd>
+						<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉条纹圆领长袖T恤</a></p>
+						<h6>
+							<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+							<del>¥230</del>
+						</h6>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt>
+						<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+							<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+							<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100399877_01_mb.jpg">
+						</a>
+					</dt>
+					<dd>
+						<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色圆领长袖T恤</a></p>
+						<h6>
+							<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+							<del>¥230</del>
+						</h6>
+					</dd>
+					</dl>
+					</li>
+				</ul>
+			</div>
+			<div class="icr_bottom">
+				<h3>
+					<a href="http://www.yougou.com/giordano-brand.html#ref=detail&amp;po=shipflag_shop" target="_blank" class="Blue">
+						<img src="../img/detail/giordano507610836.jpg" width="85" height="40" alt="佐丹奴/Giordano">
+					</a>
+				</h3>
+				<div class="icrb_con">
+					佐丹奴始创于1981年,专营中低档休闲服装的零售,1991年6月在香港上市.Giordano 提供20-35 岁的消费者一种自然随性的穿着概念,及基本与潮流兼具的商品. 佐丹奴以经营休闲服装为主,休闲一派,上班一族或稚龄的儿童,可在佐丹奴找到合适穿着的货品.关键词:佐丹奴女装、佐丹奴T恤、佐丹奴男装、佐丹奴短裤、佐丹奴牛仔裤——【佐丹奴官网专卖店】GIORDANO佐丹奴官方旗舰店_2016新款佐丹奴折扣店-优购网
+				</div>
+				<div class="icrb-more">
+					<a href="http://www.yougou.com/giordano-brand.html#ref=detail&amp;po=shipflag_shop" target="_blank" class="Blue">更多佐丹奴商品&gt;&gt;</a>
+				</div>
+			</div>
+			
+		</div>
+		<div class="histy">
+			<div class="histyGuds">
+				<div class="histytit">
+					<h3>最近浏览</h3>
+				</div>
+				<div class="histyGudsul">
+					<ul id="historyGoods2" style="top: 0px;">
+						<li>
+							<a href="http://www.yougou.com/c-giordano/sku-05326603001-100490729.shtml#ref=detail&amp;po=recent">
+								<div class="histpic">
+									<img src="http://i1.ygimg.cn/pics/giordano/2016/100490729/100490729_01_t.jpg?2" alt="">
+								</div>
+								<div class="histmsg">
+									<p class="hisproname">佐丹奴Giordano2</p>
+									<p class="price_sc"><span class="ygprc15">¥139&nbsp;&nbsp;</span><del>¥230</del></p></div></a>
+						</li>
+						<li><a href="http://www.yougou.com/c-giordano/sku-05355520001-100490711.shtml#ref=detail&amp;po=recent"><div class="histpic"><img src="http://i1.ygimg.cn/pics/giordano/2016/100490711/100490711_01_t.jpg?3" alt=""></div><div class="histmsg"><p class="hisproname">佐丹奴Giordano2</p><p class="price_sc"><span class="ygprc15">¥169&nbsp;&nbsp;</span><del>¥290</del></p></div></a></li>
+						<li><a href="http://www.yougou.com/c-inman/sku-8541320531-100316519.shtml#ref=detail&amp;po=recent"><div class="histpic"><img src="http://i1.ygimg.cn/pics/inman/2015/100316519/100316519_01_t.jpg?3" alt=""></div><div class="histmsg"><p class="hisproname">茵曼 纯棉文艺印花套头长</p><p class="price_sc"><span class="ygprc15">¥129&nbsp;&nbsp;</span><del>¥399</del></p></div></a></li></ul>
+				</div>
+			</div>
+		
+		<div class="d_container_bottom">
+		<div class="dc_tit">
+			<strong>&nbsp;&nbsp;看过本商品的用户最终购买</strong>
+			<div class="dc_pages2">第<span>1</span>页，共4页</div>
+		</div>
+		<div class="cc_prev2 cc1"></div>
+		<div class="cc_next2 cc1"></div>
+		<div class="clo_con clo_con_bottom">
+			<div class="clothes1">
+				<ul class="li">
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05355520001-100490715.shtml#ref=list&amp;po=list">
+									<sup no="100490715" class="mark_small_100490715 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实人字织花牛角袖圆领套头针织衫05355520001" src="../img/list/100490715_01_mb.jpg?2">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05355520001-100490715.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实人字织花牛角袖圆领套头针织衫05355520001">佐丹奴Giordano2016秋季女 厚实人字织花牛角袖圆领套头针织衫</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>169</strong></span>
+									<del>¥290</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="li">
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="li">
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="li">
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+		<!-- index_guide -->
+	<div id="index_guide">
+		<div class="ig_con">
+			<h2>优购导购</h2>
+			<div class="ig_box">
+			<div class="move_btn"></div>
+		<div class="brand_move" id="brand-list">
+            <a href="http://www.yougou.com/nike-brand.html#ref=all&amp;po=guide_brand1" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/nike507646290.jpg" alt="耐克">
+              耐克
+            </a>
+            <a href="http://www.yougou.com/adidas-brand.html#ref=all&amp;po=guide_brand2" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/adidas507638809.jpg" alt="阿迪达斯">
+              阿迪达斯
+            </a>
+            <a href="http://www.yougou.com/adidasoriginals-brand.html#ref=all&amp;po=guide_brand3" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/adidasclassic507604745.jpg" alt="阿迪三叶草">
+              阿迪三叶草
+            </a>
+            <a href="http://www.yougou.com/newbalance-brand.html#ref=all&amp;po=guide_brand4" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/newbalance507610154.jpg" alt="New Balance">
+              New Balance
+            </a>
+            <a href="http://www.yougou.com/belle-brand.html#ref=all&amp;po=guide_brand5" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/belle507639379.jpg" alt="百丽">
+              百丽
+            </a>
+            <a href="http://www.yougou.com/tata-brand.html#ref=all&amp;po=guide_brand6" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/tata510633928.png" alt="他她">
+              他她
+            </a>
+            <a href="http://www.yougou.com/teenmix-brand.html#ref=all&amp;po=guide_brand7" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/teenmix507609543.jpg" alt="天美意">
+              天美意
+            </a>
+            <a href="http://www.yougou.com/senda-brand.html#ref=all&amp;po=guide_brand8" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/senda506405009.jpg" alt="森达">
+              森达
+            </a>
+            <a href="http://www.yougou.com/lesaunda-brand.html#ref=all&amp;po=guide_brand9" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/lesaunda507613030.jpg" alt="莱尔斯丹">
+              莱尔斯丹
+            </a>
+            <a href="http://www.yougou.com/puma-brand.html#ref=all&amp;po=guide_brand11" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/puma507639858.jpg" alt="彪马">
+              彪马
+            </a>
+            <a href="http://www.yougou.com/onitsukatiger-brand.html#ref=all&amp;po=guide_brand12" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/shop/cms/newlogo/gzh2.jpg" alt="鬼冢虎">
+              鬼冢虎
+            </a>
+            <a href="http://www.yougou.com/converse-brand.html#ref=all&amp;po=guide_brand13" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/converse506750560.jpg" alt="匡威">
+              匡威
+            </a>
+            <a href="http://www.yougou.com/adidasneo-brand.html#ref=all&amp;po=guide_brand13" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/adidasneo507638832.jpg" alt="阿迪休闲">
+              阿迪休闲
+            </a>
+            <a href="http://www.yougou.com/skechers-brand.html#ref=all&amp;po=guide_brand14" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/skechers507606504.jpg" alt="斯凯奇">
+              斯凯奇
+            </a>
+            <a href="http://www.yougou.com/basto-brand.html#ref=all&amp;po=guide_brand15" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/basto523422927.jpg" alt="百思图">
+              百思图
+            </a>
+            <a href="http://www.yougou.com/markfairwhale-brand.html#ref=all&amp;po=guide_brand16" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/markfairwhale506403575.jpg" alt="马克华菲">
+              马克华菲
+            </a>
+            <a href="http://www.yougou.com/staccato-brand.html#ref=all&amp;po=guide_brand18" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/staccato507605520.jpg" alt="思加图">
+              思加图
+            </a>
+            <a href="http://www.yougou.com/jackwolfskin-brand.html#ref=all&amp;po=guide_brand19" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/jackwolfskin507637659.jpg" alt="JACK WOLFSKIN">
+              JACK WOLFSKIN
+            </a>
+            <a href="http://www.yougou.com/lee-brand.html#ref=all&amp;po=guide_brand21" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/lee506398422.jpg" alt="LEE">
+              LEE
+            </a>
+            <a href="http://www.yougou.com/cat-brand.html#ref=all&amp;po=guide_brand22" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/cat507636509.jpg" alt="卡特">
+              卡特
+            </a>
+            <a href="http://www.yougou.com/bata-brand.html#ref=all&amp;po=guide_brand23" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/bata507639265.jpg" alt="拔佳">
+              拔佳
+            </a>
+            <a href="http://www.yougou.com/ckjeans-brand.html#ref=all&amp;po=guide_brand23" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/ckjeans421937764.jpg" alt="CK jeans">
+              CK jeans
+            </a>
+            <a href="http://www.yougou.com/qiaodan-brand.html#ref=all&amp;po=guide_brand23" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/qiaodan507603771.jpg" alt="乔丹">
+              乔丹
+            </a>
+            <a href="http://www.yougou.com/vans-brand.html#ref=all&amp;po=guide_brand24" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/vans506406901.jpg" alt="万斯">
+              万斯
+            </a>
+            <a href="http://www.yougou.com/xtep-brand.html#ref=all&amp;po=guide_brand24" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/xtep507609335.jpg" alt="特步">
+              特步
+            </a>
+            <a href="http://www.yougou.com/giordano-brand.html#ref=all&amp;po=guide_brand26" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/giordano507610836.jpg" alt="佐丹奴">
+              佐丹奴
+            </a>
+            <a href="http://www.yougou.com/sanliuyi-brand.html#ref=all&amp;po=guide_brand26" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/sanliuyi510894992.jpg" alt="361°">
+              361°
+            </a>
+            <a href="http://www.yougou.com/kingcamp-brand.html#ref=all&amp;po=guide_brand27" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/kingcamp507615661.jpg" alt="康尔健野">
+              康尔健野
+            </a>
+            <a href="http://www.yougou.com/timberland-brand.html#ref=all&amp;po=guide_brand27" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/timberland507609698.jpg" alt="添柏岚">
+              添柏岚
+            </a>
+            <a href="http://www.yougou.com/toread-brand.html#ref=all&amp;po=guide_brand28" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/toread507608931.jpg" alt="探路者">
+              探路者
+            </a>
+            <a href="http://www.yougou.com/walkershop-brand.html#ref=all&amp;po=guide_brand28" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/walkershop507639177.jpg" alt="奥卡索">
+              奥卡索
+            </a>
+            <a href="http://www.yougou.com/hushpuppies-brand.html#ref=all&amp;po=guide_brand29" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/hushpuppies507610094.jpg" alt="暇步士">
+              暇步士
+            </a>
+            <a href="http://www.yougou.com/rax-brand.html#ref=all&amp;po=guide_brand31" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/rax507727741.jpg" alt="RAX">
+              RAX
+            </a>
+            <a href="http://www.yougou.com/oiwas-brand.html#ref=all&amp;po=guide_brand33" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/oiwas507638997.jpg" alt="爱华仕">
+              爱华仕
+            </a>
+            <a href="http://www.yougou.com/paulfrank-brand.html#ref=all&amp;po=guide_brand35" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/paulfrank507640225.jpg" alt="Paul Frank">
+              Paul Frank
+            </a>
+            <a href="http://www.yougou.com/thenorthface-brand.html#ref=all&amp;po=guide_brand38" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/thenorthface507728112.jpg" alt="乐斯菲斯">
+              乐斯菲斯
+            </a>
+            <a href="http://www.yougou.com/columbia-brand.html#ref=all&amp;po=guide_brand39" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/columbia507642261.jpg" alt="哥伦比亚">
+              哥伦比亚
+            </a>
+            <a href="http://www.yougou.com/lining-brand.html#ref=all&amp;po=guide_brand42" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/lining507645232.jpg" alt="李宁">
+              李宁
+            </a>
+            <a href="http://www.yougou.com/erke-brand.html#ref=all&amp;po=guide_brand44" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/crek518064926.jpg" alt="鸿星尔克">
+              鸿星尔克
+            </a>
+            <a href="http://www.yougou.com/dickies-brand.html#ref=all&amp;po=guide_brand45" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/dickies507636553.jpg" alt="Dickies">
+              Dickies
+            </a>
+            <a href="http://www.yougou.com/asics-brand.html#ref=all&amp;po=guide_brand46" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/asics507610277.jpg" alt="亚瑟士">
+              亚瑟士
+            </a>
+            <a href="http://www.yougou.com/warrior-brand.html#ref=all&amp;po=guide_brand47" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/warrior507643111.jpg" alt="回力">
+              回力
+            </a>
+            <a href="http://www.yougou.com/Leecooper-brand.html#ref=all&amp;po=guide_brand48" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/leecooper507612688.jpg" alt="Lee Cooper">
+              Lee Cooper
+            </a>
+            <a href="http://www.yougou.com/innet-brand.html#ref=all&amp;po=guide_brand51" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/innet474093564.jpg" alt="茵奈儿">
+              茵奈儿
+            </a>
+            <a href="http://www.yougou.com/seven7-brand.html#ref=all&amp;po=guide_brand57" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/seven507611185.jpg" alt="Seven7">
+              Seven7
+            </a>
+            <a href="http://www.yougou.com/joypeace-brand.html#ref=all&amp;po=guide_brand57" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/joypeace468306549.jpg" alt="真美诗">
+              真美诗
+            </a>
+            <a href="http://www.yougou.com/disney-brand.html#ref=all&amp;po=guide_brand60" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/disney507641173.jpg" alt="迪士尼">
+              迪士尼
+            </a>
+            <a href="http://seoul.yougou.com/seoul/TOPGIRL.shtml#ref=all&amp;po=guide_brand60" target="_blank" style="display: block;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/topgirl493209946.jpg" alt="TOPGIRL">
+              TOPGIRL
+            </a>
+            <a href="http://www.yougou.com/lalpina-brand.html#ref=all&amp;po=guide_brand66" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/lalpina506397309.jpg" alt="阿尔皮纳">
+              阿尔皮纳
+            </a>
+            <a href="http://www.yougou.com/merrell-brand.html#ref=all&amp;po=guide_brand75" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/merrell507697299.jpg" alt="迈乐">
+              迈乐
+            </a>
+            <a href="http://www.yougou.com/camel-brand.html#ref=all&amp;po=guide_brand77" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/camel507617935.jpg" alt="CAMEL骆驼">
+              CAMEL骆驼
+            </a>
+            <a href="http://www.yougou.com/hstyle-brand.html#ref=all&amp;po=guide_brand80" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/hstyle507642693.jpg" alt="韩都衣舍">
+              韩都衣舍
+            </a>
+            <a href="http://www.yougou.com/inman-brand.html#ref=all&amp;po=guide_brand81" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/inman507610638.jpg" alt="茵曼">
+              茵曼
+            </a>
+            <a href="http://www.yougou.com/reddragonfly-brand.html#ref=all&amp;po=guide_brand83" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/reddragonfly507642841.jpg" alt="红蜻蜓">
+              红蜻蜓
+            </a>
+            <a href="http://www.yougou.com/miffy-brand.html#ref=all&amp;po=guide_brand88" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/miffy507645792.jpg" alt="米菲">
+              米菲
+            </a>
+            <a href="http://www.yougou.com/fuguiniao-brand.html#ref=all&amp;po=guide_brand89" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/fuguiniao487835102.jpg" alt="富贵鸟">
+              富贵鸟
+            </a>
+            <a href="http://www.yougou.com/peak-brand.html#ref=all&amp;po=guide_brand89" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/peak507603604.jpg" alt="匹克">
+              匹克
+            </a>
+            <a href="http://www.yougou.com/hyx-brand.html#ref=all&amp;po=guide_brand90" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/hyx507642790.jpg" alt="恒源祥">
+              恒源祥
+            </a>
+            <a href="http://www.yougou.com/tanboer-brand.html#ref=all&amp;po=guide_brand92" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/tanboer507606760.jpg" alt="坦博尔">
+              坦博尔
+            </a>
+            <a href="http://www.yougou.com/thermos-brand.html#ref=all&amp;po=guide_brand120" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/thermos507806138.jpg" alt="膳魔师">
+              膳魔师
+            </a>
+            <a href="http://www.yougou.com/millies-brand.html#ref=all&amp;po=guide_brand123" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/millies527742673.jpg" alt="妙丽">
+              妙丽
+            </a>
+            <a href="http://www.yougou.com/swissgear-brand.html#ref=all&amp;po=guide_brand123" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/swissgear507604686.jpg" alt="瑞士军刀">
+              瑞士军刀
+            </a>
+            <a href="http://www.yougou.com/nautica-brand.html#ref=all&amp;po=guide_brand124" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/nautica506398841.jpg" alt="NAUTICA">
+              NAUTICA
+            </a>
+            <a href="http://www.yougou.com/firs-brand.html#ref=all&amp;po=guide_brand125" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/firs507604853.jpg" alt="杉杉">
+              杉杉
+            </a>
+            <a href="http://www.yougou.com/diplomat-brand.html#ref=all&amp;po=guide_brand127" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/diplomat507614032.jpg" alt="外交官">
+              外交官
+            </a>
+            <a href="http://www.yougou.com/langsha-brand.html#ref=all&amp;po=guide_brand129" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/langsha507645111.jpg" alt="浪莎">
+              浪莎
+            </a>
+            <a href="http://www.yougou.com/hellokitty-brand.html#ref=all&amp;po=guide_brand131" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/hellokitty507636820.jpg" alt="HELLO KITTY">
+              HELLO KITTY
+            </a>
+            <a href="http://seoul.yougou.com/seoul/ANDEW.shtml#ref=all&amp;po=guide_brand144" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/andew493099807.jpg" alt="ANDEW">
+              ANDEW
+            </a>
+            <a href="http://seoul.yougou.com/seoul/AGATHA.shtml#ref=all&amp;po=guide_brand193" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/agatha506397541.jpg" alt="AGATHA">
+              AGATHA
+            </a>
+            <a href="http://www.yougou.com/uspoloassn-brand.html#ref=all&amp;po=guide_brand198" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/uspoloassn507645740.jpg" alt="美国马球协会">
+              美国马球协会
+            </a>
+            <a href="http://www.yougou.com/mamzelle-brand.html#ref=all&amp;po=guide_brand200" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/mamzelle502364537.jpg" alt="MAM'ZELLE">
+              MAM'ZELLE
+            </a>
+            <a href="http://www.yougou.com/crocs-brand.html#ref=all&amp;po=guide_brand236" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/crocs507644176.jpg" alt="卡骆驰">
+              卡骆驰
+            </a>
+            <a href="http://www.yougou.com/toyouth-brand.html#ref=all&amp;po=guide_brand241" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/toyouth507640027.jpg" alt="初语">
+              初语
+            </a>
+            <a href="http://seoul.yougou.com/seoul/GGPX.shtml#ref=all&amp;po=guide_brand242" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/ggpx493099103.jpg" alt="GGPX">
+              GGPX
+            </a>
+            <a href="http://www.yougou.com/malkovich-brand.html#ref=all&amp;po=guide_brand255" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/malkovich484918753.jpg" alt="马可维奇">
+              马可维奇
+            </a>
+            <a href="http://www.yougou.com/europrimo-brand.html#ref=all&amp;po=guide_brand265" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/europrimo464928410.jpg" alt="派茉">
+              派茉
+            </a>
+            <a href="http://www.yougou.com/farino-brand.html#ref=all&amp;po=guide_brand305" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/shop/cms/newlogo/flno2.jpg" alt="法雷诺">
+              法雷诺
+            </a>
+            <a href="http://www.yougou.com/esprit-brand.html#ref=all&amp;po=guide_brand311" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/esprit507636708.jpg" alt="ESPRIT">
+              ESPRIT
+            </a>
+            <a href="http://seoul.yougou.com/f-hum-0-0.html#ref=all&amp;po=guide_brand343" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/hum506750357.jpg" alt="HUM">
+              HUM
+            </a>
+            <a href="http://www.yougou.com/mafemato-brand.html#ref=all&amp;po=guide_brand360" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/mafemato475902590.jpg" alt="玛菲玛图">
+              玛菲玛图
+            </a>
+            <a href="http://seoul.yougou.com/seoul/ngl.shtml#ref=all&amp;po=guide_brand370" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/nain502454175.jpg" alt="NAIN">
+              NAIN
+            </a>
+            <a href="http://www.yougou.com/playboy-brand.html#ref=all&amp;po=guide_brand428" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/playboy473997258.jpg" alt="花花公子">
+              花花公子
+            </a>
+            <a href="http://seoul.yougou.com/seoul/BEYONDCLOSET.shtml#ref=all&amp;po=guide_brand442" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/beyondcloset493099739.jpg" alt="BEYOND CLOSET">
+              BEYOND CLOSET
+            </a>
+            <a href="http://seoul.yougou.com/seoul/CLRIDE.n.shtml#ref=all&amp;po=guide_brand465" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/clriden493099301.jpg" alt="CLRIDE.n">
+              CLRIDE.n
+            </a>
+            <a href="http://www.yougou.com/lalpina-brand.html#ref=all&amp;po=guide_brand468" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/lalpina507610561.jpg" alt="阿尔皮纳袋鼠">
+              阿尔皮纳袋鼠
+            </a>
+            <a href="http://seoul.yougou.com/seoul/BUCKAROO.shtml#ref=all&amp;po=guide_brand468" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/buckaroo493099875.jpg" alt="BUCKAROO">
+              BUCKAROO
+            </a>
+            <a href="http://www.yougou.com/bostanten-brand.html#ref=all&amp;po=guide_brand521" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/bostanten464177848.jpg" alt="波斯丹顿">
+              波斯丹顿
+            </a>
+            <a href="http://www.yougou.com/amh-brand.html#ref=all&amp;po=guide_brand532" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/amh507636291.jpg" alt="AMH">
+              AMH
+            </a>
+            <a href="http://www.yougou.com/clothin-brand.html#ref=all&amp;po=guide_brand543" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/clothin507644102.jpg" alt="卡鲁森">
+              卡鲁森
+            </a>
+            <a href="http://seoul.yougou.com/seoul/bll.shtml#ref=all&amp;po=guide_brand581" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/biliwili487677140.jpg" alt="BILIWILI">
+              BILIWILI
+            </a>
+            <a href="http://seoul.yougou.com/seoul/ADVISORY.shtml#ref=all&amp;po=guide_brand653" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/advisory493099524.jpg" alt="ADVISORY">
+              ADVISORY
+            </a>
+            <a href="http://seoul.yougou.com/seoul/ccl.shtml#ref=all&amp;po=guide_brand700" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/chrischristy506750291.jpg" alt="CHRIS.CHRISTY">
+              CHRIS.CHRISTY
+            </a>
+            <a href="http://seoul.yougou.com/seoul/BONNIEALEX.shtml#ref=all&amp;po=guide_brand834" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/bonniealex493099597.jpg" alt="BONNIE ALEX">
+              BONNIE ALEX
+            </a>
+            <a href="http://www.yougou.com/chums-brand.html#ref=all&amp;po=guide_brand883" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/chums507603735.jpg" alt="洽睦斯">
+              洽睦斯
+            </a>
+            <a href="http://seoul.yougou.com/seoul/FRANKSTONE.shtml#ref=all&amp;po=guide_brand940" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i2.ygimg.cn/pics/brandlogo/frankstone493099378.jpg" alt="FRANK STONE">
+              FRANK STONE
+            </a>
+            <a href="http://seoul.yougou.com/seoul/USNTHEM.shtml#ref=all&amp;po=guide_brand955" target="_blank" style="display: none;">
+              <img class="" width="85" height="40" src="http://i1.ygimg.cn/pics/brandlogo/usnthem493099666.jpg" alt="US N THEM">
+              US N THEM
+            </a>
+      </div>
+      		<ul class="rec_buy_link mt20">
+            <li>
+              <dl>
+                <a href="http://www.yougou.com/sports.html" class="fr Gray">更多&gt;&gt;</a>
+                <dd><a href="http://www.yougou.com/sports.html" target="_blank">时尚运动</a></dd>
+                <dt>
+                      <a href="http://www.yougou.com/f-0-IHY_MLU_S4J_KDL_58V-0-0.html?sort=3#ref=all&amp;po=guide_kw000" target="_blank">跑步鞋</a>
+                      <a href="http://www.yougou.com/f-0-IHY_MLU_S4J_RMJ_LF8-0-0.html?sort=3#ref=all&amp;po=guide_kw001" target="_blank">板鞋</a>
+                      <a href="http://www.yougou.com/f-0-IHY_MLU_S4J_KDL_6S0-0-0.html?sort=3#ref=all&amp;po=guide_kw002" target="_blank">篮球鞋</a>
+                      <a href="http://www.yougou.com/f-0-PTK_9NZ_K02-0-6.html?sort=3#ref=all&amp;po=guide_kw003" target="_blank">T恤</a>
+                      <a href="http://www.yougou.com/f-0-PTK_9NZ_VK5-0-6.html?sort=3#ref=all&amp;po=guide_kw004" target="_blank">POLO衫</a>
+                      <a href="http://www.yougou.com/f-0-PTK_9NZ_FTS-0-0.html?sort=3#ref=all&amp;po=guide_kw005" target="_blank">短裤</a>
+                </dt>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <a href="http://www.yougou.com/shoes.shtml" class="fr Gray">更多&gt;&gt;</a>
+                <dd><a href="http://www.yougou.com/shoes.shtml" target="_blank">流行男鞋</a></dd>
+                <dt>
+                      <a href="http://www.yougou.com/f-0-Y0A_KJG-0-0.html?sort=3#ref=all&amp;po=guide_kw100" target="_blank">凉鞋</a>
+                      <a href="http://www.yougou.com/f-0-Y0A_XE1_R5O-04Y004-0.html?sort=3#ref=all&amp;po=guide_kw102" target="_blank">乐福鞋</a>
+                      <a href="http://www.yougou.com/f-0-Y0A_XE1_96F-04Y004-0.html?sort=3#ref=all&amp;po=guide_kw103" target="_blank">帆布鞋</a>
+                      <a href="http://www.yougou.com/f-0-Y0A_XE1_71O-04Y004-0.html?sort=3#ref=all&amp;po=guide_kw104" target="_blank">系带</a>
+                      <a href="http://www.yougou.com/f-0-Y0A_XE1_Q28-04Y004-0.html?sort=3#ref=all&amp;po=guide_kw105" target="_blank">套脚</a>
+                      <a href="http://www.yougou.com/f-0-Y0A_XE1_MIX-04Y004-0.html?sort=3#ref=all&amp;po=guide_kw106" target="_blank">正装</a>
+                </dt>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <a href="http://www.yougou.com/shoes.shtml" class="fr Gray">更多&gt;&gt;</a>
+                <dd><a href="http://www.yougou.com/shoes.shtml" target="_blank">潮流女鞋</a></dd>
+                <dt>
+                      <a href="http://www.yougou.com/f-0-MXZ_FQM_KBN-0-0.html?sort=3#ref=all&amp;po=guide_kw200" target="_blank">中空凉鞋</a>
+                      <a href="http://www.yougou.com/f-0-MXZ_FQM-00N016-0.html?sort=3#ref=all&amp;po=guide_kw201" target="_blank">镂空</a>
+                      <a href="http://www.yougou.com/f-0-MXZ_FQM_DT3-0-0.html?sort=3#ref=all&amp;po=guide_kw202" target="_blank">鱼嘴</a>
+                      <a href="http://www.yougou.com/f-0-MXZ_FQM-00J003-0.html?sort=3#ref=all&amp;po=guide_kw203" target="_blank">平底</a>
+                      <a href="http://www.yougou.com/f-0-MXZ_FQM_LWB-0-0.html?sort=3#ref=all&amp;po=guide_kw205" target="_blank">凉拖</a>
+                      <a href="http://www.yougou.com/f-0-MXZ_FQM-00J001-0.html?sort=3#ref=all&amp;po=guide_kw206" target="_blank">高跟</a>
+                </dt>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <a href="http://www.yougou.com/kids.html" class="fr Gray">更多&gt;&gt;</a>
+                <dd><a href="http://www.yougou.com/kids.html" target="_blank">童鞋童装</a></dd>
+                <dt>
+                      <a href="http://www.yougou.com/f-0-9XB_HX4_2BI-0-0.html?sort=3#ref=all&amp;po=guide_kw300" target="_blank">户外鞋</a>
+                      <a href="http://www.yougou.com/f-0-9XB_HX4_N2F-0-0.html?sort=3#ref=all&amp;po=guide_kw301" target="_blank">跑步鞋</a>
+                      <a href="http://www.yougou.com/f-0-9XB_HX4_KTB-0-0.html?sort=3#ref=all&amp;po=guide_kw302" target="_blank">板鞋</a>
+                      <a href="http://www.yougou.com/f-0-9XB_A0E_DDD-0-0.html?sort=3#ref=all&amp;po=guide_kw303" target="_blank">卫衣</a>
+                      <a href="http://www.yougou.com/f-0-9XB_A0E_J6C-0-0.html?sort=3#ref=all&amp;po=guide_kw304" target="_blank">裤装</a>
+                      <a href="http://www.yougou.com/f-0-9XB_A0E_UBH-0-0.html?sort=3#ref=all&amp;po=guide_kw305" target="_blank">套服</a>
+                      <a href="http://www.yougou.com/f-0-9XB_011-0-0.html?sort=3#ref=all&amp;po=guide_kw306" target="_blank">包配</a>
+                </dt>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <a href="http://www.yougou.com/ladies-clothing.html" class="fr Gray">更多&gt;&gt;</a>
+                <dd><a href="http://www.yougou.com/ladies-clothing.html" target="_blank">魅力女装</a></dd>
+                <dt>
+                      <a href="http://www.yougou.com/f-0-63L_43S_Y4U-0-0.html?sort=3#ref=all&amp;po=guide_kw400" target="_blank">连衣裙</a>
+                      <a href="http://www.yougou.com/f-0-63L_43S_SMI-0-0.html?sort=3#ref=all&amp;po=guide_kw401" target="_blank">半身裙</a>
+                      <a href="http://www.yougou.com/f-0-63L_I8E_3YN-0-0.html?sort=3#ref=all&amp;po=guide_kw402" target="_blank">衬衫</a>
+                      <a href="http://www.yougou.com/f-0-63L_I8E_GIQ-0-0.html?sort=3#ref=all&amp;po=guide_kw403" target="_blank">T恤</a>
+                      <a href="http://www.yougou.com/f-0-63L_NE4_XPE-0-0.html?sort=3#ref=all&amp;po=guide_kw404" target="_blank">短裤</a>
+                      <a href="http://www.yougou.com/f-0-63L_NE4_CGD-0-0.html?sort=3#ref=all&amp;po=guide_kw405" target="_blank">休闲裤</a>
+                </dt>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <a href="http://www.yougou.com/outdoor.html" class="fr Gray">更多&gt;&gt;</a>
+                <dd><a href="http://www.yougou.com/outdoor.html" target="_blank">户外休闲</a></dd>
+                <dt>
+                      <a href="http://www.yougou.com/f-0-IHY_SYG_R2P-0-0.html?sort=3#ref=all&amp;po=guide_kw500" target="_blank">户外鞋靴</a>
+                      <a href="http://www.yougou.com/f-0-IHY_SYG_X3G_ERB_U6H-0-0.html?sort=3#ref=all&amp;po=guide_kw501" target="_blank">冲锋衣</a>
+                      <a href="http://www.yougou.com/f-0-IHY_SYG_X3G_ERB_62E-0-0.html?sort=3#ref=all&amp;po=guide_kw502" target="_blank">皮肤衣</a>
+                      <a href="http://www.yougou.com/f-0-IHY_SYG_X3G_F0D_C3P-0-0.html?sort=3#ref=all&amp;po=guide_kw503" target="_blank">T恤</a>
+                      <a href="http://www.yougou.com/f-0-IHY_SYG_X3G_YOC-0-0.html?sort=3#ref=all&amp;po=guide_kw504" target="_blank">裤装</a>
+                      <a href="http://www.yougou.com/f-0-IHY_SYG_T7T-0-0.html?sort=3#ref=all&amp;po=guide_kw505" target="_blank">背包</a>
+                      <a href="http://www.yougou.com/f-0-IHY_SYG_9E7_3CM-0-0.html?sort=3#ref=all&amp;po=guide_kw506" target="_blank">配件</a>
+                </dt>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <a href="http://www.yougou.com/gentlemen-clothing.html" class="fr Gray">更多&gt;&gt;</a>
+                <dd><a href="http://www.yougou.com/gentlemen-clothing.html" target="_blank">精品男装</a></dd>
+                <dt>
+                      <a href="http://www.yougou.com/f-0-TFA_MD3_GP1-0-0.html?sort=3#ref=all&amp;po=guide_kw600" target="_blank">T恤</a>
+                      <a href="http://www.yougou.com/f-0-TFA_MD3_ZVC-0-0.html?sort=3#ref=all&amp;po=guide_kw601" target="_blank">衬衫</a>
+                      <a href="http://www.yougou.com/f-0-TFA_MD3_D9B-0-0.html?sort=3#ref=all&amp;po=guide_kw602" target="_blank">卫衣</a>
+                      <a href="http://www.yougou.com/f-0-TFA_FMA-0-0.html?sort=3#ref=all&amp;po=guide_kw603" target="_blank">外套</a>
+                      <a href="http://www.yougou.com/f-0-TFA_MD3_ZVC-0-0.html?sort=3#ref=all&amp;po=guide_kw604" target="_blank">衬衫</a>
+                      <a href="http://www.yougou.com/f-0-TFA_D74_2WP-0-0.html?sort=3#ref=all&amp;po=guide_kw605" target="_blank">牛仔裤</a>
+                      <a href="http://www.yougou.com/f-0-TFA_D74_QOS-0-0.html?sort=3#ref=all&amp;po=guide_kw606" target="_blank">休闲裤</a>
+                </dt>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <a href="http://www.yougou.com/life.shtml" class="fr Gray">更多&gt;&gt;</a>
+                <dd><a href="http://www.yougou.com/life.shtml" target="_blank">高档箱包</a></dd>
+                <dt>
+                      <a href="http://www.yougou.com/f-0-6LJ_345_I47-0-0.html?sort=3#ref=all&amp;po=guide_kw700" target="_blank">单肩包</a>
+                      <a href="http://www.yougou.com/f-0-6LJ_345_CEE-0-0.html?sort=3#ref=all&amp;po=guide_kw701" target="_blank">手提包</a>
+                      <a href="http://www.yougou.com/f-0-6LJ_Q5K_66S-0-0.html?sort=3#ref=all&amp;po=guide_kw702" target="_blank">双肩包</a>
+                      <a href="http://www.yougou.com/f-0-6LJ_345_ZV1-0-0.html?sort=3#ref=all&amp;po=guide_kw703" target="_blank">钱包</a>
+                      <a href="http://www.yougou.com/sr/searchKey.sc?keyword=%E6%89%8B%E6%8B%BF%E5%8C%85&amp;orderBy=0&amp;catgNo=6LJ?sort=3#ref=all&amp;po=guide_kw704" target="_blank">手拿包</a>
+                      <a href="http://www.yougou.com/f-0-6LJ_MOT-0-0.html?sort=3#ref=all&amp;po=guide_kw705" target="_blank">旅行箱</a>
+                </dt>
+              </dl>
+            </li>
+      </ul>
+			</div>
+		</div>
+	</div>
+		<!-- index_footer -->
+	<div id="index_footer">
+		<div class="footer_con">
+			<ul class="footop-list">
+				<li>
+					<i class="item1 item"></i>
+					<a href="http://www.yougou.com/help/aboutus.shtml" target="_blank" rel="nofollow"><span>正品</span>保证</a>
+				</li>
+				<li>
+					<i class="item2 item"></i>
+					<a href="http://www.yougou.com/help/aboutus.shtml" target="_blank" rel="nofollow"><span>10天</span>退换货</a>
+				</li>
+				<li>
+					<i class="item3 item"></i>
+					<a href="http://www.yougou.com/help/aboutus.shtml" target="_blank" rel="nofollow"><span>10天调价</span>补差额</a>
+				</li>
+				<li>
+					<i class="item4 item"></i>
+					<a href="http://www.yougou.com/help/aboutus.shtml" target="_blank" rel="nofollow"><span>7X24小时</span>在线客服</a>
+				</li>
+			</ul>
+			<div class="f_help">
+				<dl>
+					<dt>新手帮助</dt>
+					<dd><a href="http://www.yougou.com/help/agreement.shtml" target="_blank" rel="nofollow">交易条款协议</a></dd>
+					<dd><a href="http://www.yougou.com/help/registration.shtml" target="_blank" rel="nofollow">注册新用户</a></dd>
+					<dd><a href="http://www.yougou.com/help/memberpoints.shtml" target="_blank" rel="nofollow">会员积分详情</a></dd>	
+				</dl>
+				<dl>
+					<dt>购物指南</dt>
+					<dd><a href="http://www.yougou.com/help/orderprocess.shtml" target="_blank" rel="nofollow">订购流程</a></dd>
+					<dd><a href="http://www.yougou.com/help/inspectionandsign.shtml" target="_blank" rel="nofollow">验货与签收</a></dd>
+					<dd><a href="http://www.yougou.com/help/orderinquiries.shtml" target="_blank" rel="nofollow">订单配送查询</a></dd>
+				</dl>
+				<dl>
+			        <dt>支付/配送</dt>
+			        <dd><a href="http://www.yougou.com/help/payonline.shtml" target="_blank" rel="nofollow">支付方式</a></dd>
+			        <dd><a href="http://www.yougou.com/help/shippingmethod.shtml" target="_blank" rel="nofollow">配送方式</a></dd>
+			        <dd><a href="http://www.yougou.com/help/deliverytf.shtml" target="_blank" rel="nofollow">配送时间及运费</a></dd>
+			    </dl>
+				<dl>
+			        <dt>售后服务</dt>
+			        <dd><a href="http://www.yougou.com/help/returnpolicy.shtml" target="_blank" rel="nofollow">退换货政策</a></dd>
+
+			        <dd><a href="http://www.yougou.com/help/refundment.shtml" target="_blank" rel="nofollow">退款说明</a></dd>
+			        <dd><a href="http://www.yougou.com/help/invoicesystem.shtml" target="_blank" rel="nofollow">发票制度</a></dd>
+			    </dl>
+			    <dl>
+				    <dt>会员服务</dt>
+				    <dd><a href="http://www.yougou.com/help/forgotpassword.shtml" target="_blank" rel="nofollow">找回密码</a></dd>
+				    <dd><a href="http://www.yougou.com/help/contactus.shtml" target="_blank">联系我们</a></dd>
+				</dl>
+				<dl class="help">
+			        <dt>优购客服</dt>
+			        <dd class="kf tleft"><span>
+						<a onclick="javascript:NTKF.im_openInPageChat();" class="lnk-ntalker" href="javascript:;">在线咨询</a>
+						</span>
+					</dd>
+			        <dd>Email：<span class="Red Size12">service@yougou.com</span></dd>
+			        <dd>分享购QQ群：<span class="Red Size12">518411158</span></dd>
+			        <dd>分享购微信号：<span class="Red Size12">youyoufenxianggou</span></dd>
+			    </dl>
+			    <dl class="qrcode">
+			        <dd class="center"><a href="http://m.yougou.com/agent" target="_blank"><img src="../img/index/footer-mobile-qrcode.jpg" width="114" height="103"></a></dd>
+			        <dd class="tright"><img src="../img/index/footer-wechat-qrcode.jpg" width="72" height="103"></dd>
+			    </dl>
+			</div>
+		</div>
+	</div>
+		<!-- index_footinfo -->
+	<div id="index_footinfo">
+		<div class="if_con">
+			<div class="if_con_logo">
+				<a href="http://www.yougou.com/" class="ba_logo" title="优购时尚商城" alt="优购时尚商城"><img src="../img/index/endlogo.gif"></a>
+			</div>
+			<div class="if_footer">
+				<p class="tright">
+				    <a href="http://www.yougou.com/help/aboutus.shtml" target="_blank">关于优购</a> |
+				    <a href="http://www.yougou.com/help/business.shtml" target="_blank">品牌招商</a> |
+				    <a href="http://www.yougou.com/group_purchasing.shtml" target="_blank">集团采购</a> |
+				    <a href="http://www.yougou.com/help/zhaopin.shtml" target="_blank">招贤纳士</a> |
+				    <a href="http://www.yougou.com/topics/mobile.shtml" target="_blank">手机优购</a> |
+				    <a href="http://www.yougou.com/help/contactus.shtml" target="_blank">联系我们</a> |
+				    <a target="_blank" href="http://www.yougou.com/brand_daqo.shtml">品牌大全</a> |
+				    <a href="http://www.yougou.com/sitemap.shtml" target="_blank">网站地图</a> |
+				    <a href="http://top.yougou.com" target="_blank">销售排行</a> |
+				    <a href="http://style.yougou.com/info.shtml" target="_blank">优购资讯</a> |
+				    <a href="http://cps.yougou.com" target="_blank">网站联盟</a> |
+				    <a href="http://www.yougou.com/friendlink.shtml" target="_blank">友情链接</a>
+				    <!--<a href="/product_list/p1.shtml" target="_blank" >产品大全</a> -->
+				</p>
+				<p>
+			        Copyright © 2011-2016 Yougou Technology Co., Ltd.
+			        <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">粤ICP备09070608号-4</a>
+			        增值电信业务经营许可证：
+			        <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">粤
+			        B2-20090203</a>&nbsp;<span>深公网安备：4403101910665 </span>
+			        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502000017" style="text-decoration:none;height:20px;line-height:20px;"><img style="display:inline-block;" src="http://i1.ygimg.cn/pics/shop/zhu_zhan/template/common/images/bei_an_tu_biao_.png"><span style="height:20px;line-height:20px;margin: 0px 0px 0px 5px;">粤公网安备 44030502000017号</span></a>
+			    </p>
+			    <p class="tright beian">
+			        <a href="http://61.144.227.239:9002/" target="_blank" rel="nofollow" class="ba_link2"><img src="../img/index/beian2.png"></a>
+			        <a href="http://www.miibeian.gov.cn/" target="_blank" rel="nofollow" class="ba_link1"><img src="../img/index/beian1.png"></a>
+			        
+			        <a href="http://szcert.ebs.org.cn/93740fab-b419-4b67-940c-d2e808d6480b" class="ba_link2" target="_blank" title="众信网" rel="nofollow"><img src="../img/index/ebs-logo.jpg" width="108" height="40"></a>
+			        <a style="width:108px; height:40px;" href="http://www.anquan.org/authenticate/cert/?site=www.yougou.com&amp;at=realname" logo_type="realname" logo_size="124x47" key="521b3d2524306332d3107ff3" target="_blank"><img width="109" height="40" src="../img/index/sm_124x47.png" style="border: medium none;" alt="安全联盟认证"></a>
+			        <a href="http://cert.ebs.org.cn/93740fab-b419-4b67-940c-d2e808d6480b.html" class="ba_link2" target="_blank" title="众信网" rel="nofollow"><img src="../img/index/ebs.png" width="108" height="40"></a>
+			    </p>
+			</div>
+		</div>
+	</div>
+	<!-- 回到顶部 -->
+	<div class="goback"><a href="javascript:void(0);"></a></div>
+</body>
+</html>

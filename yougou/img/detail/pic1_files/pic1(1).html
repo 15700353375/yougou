@@ -1,0 +1,636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0057)http://www.yougou.com/inc/code_iframe.shtml?url=prod-csku -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script charset="utf-8" src="v.js"></script><script async="true" type="text/javascript" src="event" data-owner="criteo-tag"></script><script async="" src="ld.js"></script><script src="cbn.js"></script><script async="" src="gt.js"></script>
+  
+  <script type="text/javascript" async="" src="fx.js"></script><script src="hm.js"></script><script type="text/javascript">
+      /** trim() method for String */
+      String.prototype.trim=function() {
+          return this.replace(/(^\s*)|(\s*$)/g,'');
+      };
+      function dateToYMD(date) {
+          var d = date.getDate();
+          var m = date.getMonth() + 1;
+          var y = date.getFullYear();
+          return '' + y + '-' + (m<=9 ? '0' + m : m) + '-' + (d <= 9 ? '0' + d : d);
+      }
+      function getCookie(name){
+          var cookieValue = null;
+          var cookies = document.cookie.split(';');
+          for (var i = 0; i < cookies.length; i++) {
+              var cookie = cookies[i].trim();
+              if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                  cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                  break;
+              }
+          }
+          return cookieValue;
+      }
+      function getProd(commodities) {
+          var prod = [];
+          for(var i=0; i<commodities.length; i++) {
+              prod.push({
+                  p_id: commodities[i]['no'],
+                  p_price: commodities[i]['price'],
+                  p_num: commodities[i]['number']
+              });
+          }
+          return prod;
+      }
+      function getPZoomProd(commodities) {
+          var prod = [];
+          for(var i=0; i<commodities.length; i++) {
+              prod.push({
+                  sku: commodities[i]['no'],
+                  price: commodities[i]['price'],
+                  quantity: commodities[i]['number']
+              });
+          }
+          return prod;
+      }
+      function getCriTeoProd(commodities,len) { //获取 criteo 所需要的产品数据 len 参数用来截取掉部分页面中商品id后面的sku编码，参数类型必须为数字，否则无效
+        var prod = [];
+        for(var i=0; i<commodities.length; i++) {
+          prod.push({
+            id: !isNaN(len) ? (commodities[i]['no']+'').slice(0,-len) : commodities[i]['no'],
+            price: commodities[i]['price'],
+            quantity: commodities[i]['number']
+          });
+        }
+        return prod;
+      }
+
+      function gdtuAddToCart(commodities){
+        for(var i=0; i<commodities.length; i++) {
+          gdt_tracker.push([ 'add_action', 'ADD_TO_CART',
+            commodities[i]['no'],           //商品ID
+            "",       //商品页URL,空字符串则上报当前URL为商品页URL
+            "",           //类目ID
+            "",          //类目名称
+            "",           //品牌ID
+            ""                //店铺ID
+          ]);
+        }
+      }
+      function gdtuOrderItem(commodities, orderNo){
+        for(var i=0; i<commodities.length; i++) {
+          gdt_tracker.push(['add_action', 'ORDER_ITEM',
+            orderNo,        //订单ID
+            commodities[i]['no'],           //商品ID
+            "",    //商品页URL,空字符串则上报当前URL为商品页URL
+            "",           //类目ID
+            "",          //类目名称
+            "",           //品牌ID
+            ""            //店铺ID
+          ]);
+        }
+      }
+      function gdtuFinishOrder(yg_order_data){
+        gdt_tracker.push([ 'add_action', 'ORDER',
+          yg_order_data['order_no'],        //订单ID
+          yg_order_data['order_sum']          //订单总金额
+        ]);
+        gdtuOrderItem(yg_order_data['commodities'], yg_order_data['order_no']);
+      }
+
+      //-----------  baidu dsp  -----------//
+      var _hmt = _hmt || [];
+      var yg_data = parent.dsp_config,
+          rtTag = {};
+      rtTag['data'] = {};
+
+      //-----------  pzoom dsp  -----------//
+      var _fxcmd = _fxcmd || [];
+      _fxcmd.sid = 'cdd2f9b90022972b3b7c8a75e7bed335';
+      _fxcmd.ct=1440;
+
+      //-----------  aspiration-cn 广点通 dsp  -----------//
+      var gdtData = {},
+          gdtToken = 'Mzc1MDksNTk5YTI4NjU2OTdhOTExNjYyMWM1ZjMyNjhkNmYxYjA=',
+          gdtUtmSource = getCookie('__yga'),
+          gdtDateTime = dateToYMD(new Date());
+      var idx = gdtUtmSource.indexOf('.');
+      if (idx != -1) {
+          gdtUtmSource = gdtUtmSource.substring(0, idx);
+      }
+
+      //----------- 跟踪用户行为 广点通 dsp  -----------//
+      var gdt_tracker = gdt_tracker || [];
+          gdt_tracker.push(["set_source_id", 8]);
+
+      //----------- 搜狗 dsp  -----------//
+      var sg_dsp_id = '18618832';
+      var sg_dsp_data = sg_dsp_data || [];
+
+      //----------- CRITEO dsp  -----------//
+      var criteo_q = criteo_q || [],
+        criTag = {};
+        criTag.account　=　'24845'; //身份信息
+        criTag.siteType = 'd'; //站点类型好
+
+      if (yg_data['bd_list_type'] == 'ecom_page') {         // 一般页面，首页，频道页，专题页等
+          rtTag['data'] = {
+              ecom_page: {
+                  page_type: yg_data['bd_page_type'],
+                  p_brand: '',
+                  p_class1: '',
+                  p_class2: ''
+              }
+          }
+
+        //----------- 跟踪用户行为 广点通 dsp  -----------//
+        gdt_tracker.push(['add_action','SHOP_VIEW',
+          yg_data['bd_page_type'],           // 店铺ID
+          ""       // 店铺页URL, 空字符串则上报当前当前url为店铺页URL
+        ]);
+
+        //----------- 搜狗 dsp  -----------//
+        var sg_tag = {
+            "data": {
+              "ecom_page": {
+                "page_type": yg_data['bd_page_type'], //页面类型
+                "p_brand":"",  //品牌名称，多个品牌以|分隔
+                "p_class1": "",  //一级品类
+                "p_class2": ""  //二级品类
+              }
+            }
+          };
+        sg_dsp_data.push(sg_tag);
+
+        //----------- CRITEO dsp  -----------//
+        criTag.data = {
+          event : "viewHome"
+        }
+
+      } else if (yg_data['bd_list_type'] == 'ecom_view') {  // 单品页
+          rtTag['data'] = {
+              ecom_view: {
+                  prod: [
+                      {
+                          p_id: yg_data['p_id'],
+                          p_name: yg_data['p_name'],
+                          p_brand: yg_data['p_brand'],
+                          p_price: yg_data['p_price'],
+                          p_class1: yg_data['p_class1'],
+                          p_class2: yg_data['p_class2'],
+                          p_class3: yg_data['p_class3'],
+                          p_class4: yg_data['p_class4'],
+                          p_stock: yg_data['p_stock'],
+                          p_img_url: yg_data['p_img_url'],
+                          p_url: yg_data['p_url']
+                      }
+                  ]
+              }
+          };
+
+          //----------- 搜狗 dsp  -----------//
+          var sg_tag = {
+            "data": {
+              "ecom_view": {
+                "prod": [
+                  {
+                    "p_id": yg_data['p_id'],
+                    "p_name": yg_data['p_name'],
+                    "p_brand": yg_data['p_brand'],
+                    "p_price": yg_data['p_price'],
+                    "p_class1": yg_data['p_class1'],
+                    "p_class2": yg_data['p_class2'],
+                    "p_class3": yg_data['p_class3'],
+                    "p_class4": yg_data['p_class4'],
+                    "p_stock": yg_data['p_stock'],
+                    "p_img_url": yg_data['p_img_url'],
+                    "p_url": yg_data['p_url']
+                  }
+                ]
+              }
+            }
+          };
+          sg_dsp_data.push(sg_tag)
+
+          var addCartButton = window.parent.document.getElementById('addShoppingCart');
+          var addFavorButton = window.parent.document.getElementById('favoriteImg').getElementsByTagName('a')[0];
+          var isStandardBrowsers = !!window.parent.document.addEventListener;
+          var isIE = !!window.parent.document.attachEvent;
+
+          var eventHandler = function() {
+              var rtTag = {
+                  data: {
+                      ecom_cart: {  //添加购物车
+                          prod: [{
+                              p_id: yg_data['p_id'],
+                              p_price: yg_data['p_price']
+                          }]
+                      }
+                  }
+              };
+              _hmt.push(['_trackRTEvent', rtTag]);
+
+              //----------- 搜狗 dsp  -----------//
+              var sg_tag = {
+                "data": {
+                  "ecom_cart": { //添加购物车
+                    "prod": [{
+                      "p_id": yg_data['p_id'],
+                      "p_price": yg_data['p_price']
+                    }]
+                  }
+                },
+                sg_click:'send'
+              };
+              sg_dsp_data.push(sg_tag);
+
+          };
+          var eventHandler2 = function() {
+              var rtTag = {
+                  data: {
+                      ecom_favor: {  //添加收藏夹
+                          prod: [{
+                              p_id: yg_data['p_id'],
+                              p_price: yg_data['p_price']
+                          }]
+                      }
+                  }
+              };
+              _hmt.push(['_trackRTEvent', rtTag]);
+          };
+
+          if(isStandardBrowsers) {
+              addCartButton.addEventListener('click', eventHandler, false);
+              addFavorButton.addEventListener('click', eventHandler2, false);
+          } else if(isIE) {
+              addCartButton.attachEvent('onclick', eventHandler);
+              addFavorButton.attachEvent('onclick', eventHandler2);
+          };
+
+        //----------- 跟踪用户行为 广点通 dsp  -----------//
+          gdt_tracker.push(["add_action" , 'ITEM_VIEW',
+            yg_data['p_id'],           //商品ID
+            yg_data['p_url'],      //商品页URL,空字符串则上报当前URL为商品页URL
+            "",           //类目ID
+            yg_data['p_class1'],          //类目名称
+            yg_data['p_brand'],           //品牌ID
+            ""                //店铺ID
+          ]);
+
+        //----------- CRITEO dsp  -----------//
+        criTag.data = {
+          event : "viewItem",
+          item  : yg_data['p_id']
+        }
+
+
+      } else if (yg_data['bd_list_type'] == 'ecom_search') {    // 搜索列表页
+          rtTag['data'] = {
+              ecom_search: {
+                  word: yg_data['search_word'],
+                  p_brand: yg_data['brand_name'],
+                  p_class1: yg_data['p_class1'],
+                  p_class2: yg_data['p_class2'],
+                  p_class3: yg_data['p_class3'],
+                  p_class4: yg_data['p_class4']
+              }
+          }
+
+        //----------- 跟踪用户行为 广点通 dsp  -----------//
+        gdt_tracker.push([ 'add_action', 'SEARCH',
+          yg_data['search_word'],               // 搜索关键词
+          yg_data['p_class1'],             // 搜索类目ID， 空字符串表示当前不是在类目下搜索的
+          "",            //类目名称
+          ""           // 搜索结果页URL, 空字符则上报当前当前url为 搜索结果页URL
+        ]);
+
+        //----------- 搜狗 dsp  -----------//
+        var sg_tag = {
+          "data": {
+             "ecom_search": {
+                "word": yg_data['search_word'],
+                "p_brand": yg_data['brand_name']
+            }
+          }
+        };
+        sg_dsp_data.push(sg_tag)
+
+        //----------- CRITEO dsp  -----------//
+        var criteo_prod_Data = [];
+        for(var i=0;i<yg_data['p_viewList'].length; i++){ criteo_prod_Data.push(yg_data['p_viewList'][i]); }
+        criTag.data = {
+          event : "viewList",
+          item  : criteo_prod_Data
+        }
+
+      } else if (yg_data['bd_list_type'] == 'ecom_cart') {      // 购物车页
+          rtTag['data'] = {
+              ecom_cart: {
+                  prod: getProd(yg_data['commodities'])
+              }
+          }
+
+        //----------- 跟踪用户行为 广点通 dsp  -----------//
+        gdtuAddToCart(yg_data['commodities']);
+
+        //----------- 搜狗 dsp  -----------//
+        var sg_tag = {
+          "data": {
+            "ecom_cart": {
+              "prod": getProd(yg_data['commodities'])
+            }
+          }
+        };
+        sg_dsp_data.push(sg_tag)
+
+        //----------- CRITEO dsp  -----------//
+        criTag.data = {
+          event : "viewBasket",
+          item  : getCriTeoProd(yg_data['commodities'],3)
+        }
+
+      } else if (yg_data['bd_list_type'] == 'ecom_favor') {     // 收藏夹页
+          rtTag['data'] = {
+              ecom_favor: {
+                  prod: getProd(yg_data['commodities'])
+              }
+          }
+      } else if (yg_data['bd_list_type'] == 'ecom_order') {     // 订单提交页
+          rtTag['data'] = {
+              ecom_order: {
+                  order_id: yg_data['order_no'],
+                  order_first: yg_data['order_first'],
+                  order_sum: yg_data['order_sum'],
+                  prod: getProd(yg_data['commodities'])
+              }
+          }
+
+        //----------- 跟踪用户行为 广点通 dsp  -----------//
+        gdtuOrderItem(yg_data['commodities'], yg_data['order_no']);
+
+        //----------- 搜狗 dsp  -----------//
+        var sg_tag = {
+          "data": {
+            "ecom_order": {
+              "order_id": yg_data['order_no'],
+              "order_first": yg_data['order_first'],
+              "order_sum": yg_data['order_sum'],
+              "prod": getProd(yg_data['commodities'])
+            }
+          }
+        };
+        sg_dsp_data.push(sg_tag);
+
+      } else if (yg_data['bd_list_type'] == 'ecom_pay_offline') {   // 货到付款成功页
+          rtTag['data'] = {
+              ecom_pay_offline: {
+                  order_id: yg_data['order_no'],
+                  order_first: yg_data['order_first'],
+                  order_sum: yg_data['order_sum'],
+                  prod: getProd(yg_data['commodities'])
+              }
+          }
+
+          //-----------  pzoom dsp  -----------//
+          _fxcmd.push(['trackOrder',
+              {
+                  oid: yg_data['order_no'],
+                  otp: yg_data['order_sum']
+              },
+              getPZoomProd(yg_data['commodities'])
+          ]);
+
+          //-----------  aspiration-cn 广点通 dsp  -----------//
+          gdtData = {
+              "data": {
+                  "ecom_order": {
+                      "token": gdtToken,
+                      "time": gdtDateTime,
+                      "trackcode": gdtUtmSource,
+                      "order_id": yg_data['order_no'],
+                      "order_sum": yg_data['order_sum'],
+                      "order_first": yg_data['order_first'],
+                      "EntranceUrl": gdtUtmSource
+                  }
+              }
+          };
+
+          //----------- 跟踪用户行为 广点通 dsp  -----------//
+          gdtuFinishOrder(yg_data);
+
+          //----------- 搜狗 dsp  -----------//
+          var sg_tag = {
+            "data": {
+              "ecom_pay_offline ": {
+                "order_id": yg_data['order_no'],
+                "order_first": yg_data['order_first'],
+                "order_sum": yg_data['order_sum'],
+                "prod": getProd(yg_data['commodities'])
+              }
+            }
+          };
+          sg_dsp_data.push(sg_tag);
+
+          //----------- CRITEO dsp  -----------//
+          criTag.data = {
+            event : "trackTransaction",
+            id    : yg_data['order_no'],
+            item  : getCriTeoProd(yg_data['commodities'])
+          }
+
+      } else if (yg_data['bd_list_type'] == 'ecom_pay_submit') {    // 提交在线支付订单成功页
+          rtTag['data'] = {
+              ecom_pay_submit: {
+                  order_id: yg_data['order_no'],
+                  order_first: yg_data['order_first'],
+                  order_sum: yg_data['order_sum'],
+                  prod: getProd(yg_data['commodities'])
+              }
+          }
+
+          //-----------  pzoom dsp  -----------//
+          _fxcmd.push(['trackOrder',
+              {
+                  oid: yg_data['order_no'],
+                  otp: yg_data['order_sum']
+              },
+              getPZoomProd(yg_data['commodities'])
+          ]);
+
+          //-----------  aspiration-cn 广点通 dsp  -----------//
+          gdtData = {
+              "data": {
+                  "ecom_pay_submit": {
+                      "token": gdtToken,
+                      "time": gdtDateTime,
+                      "trackcode": gdtUtmSource,
+                      "order_id": yg_data['order_no'],
+                      "order_sum": yg_data['order_sum'],
+                      "order_first": yg_data['order_first'],
+                      "EntranceUrl": gdtUtmSource
+                  }
+              }
+          };
+
+        //----------- 跟踪用户行为 广点通 dsp  -----------//
+          gdtuFinishOrder(yg_data);
+
+        //----------- 搜狗 dsp  -----------//
+        var sg_tag = {
+          "data": {
+            "ecom_pay_submit": {
+              order_id: yg_data['order_no'],
+              order_first: yg_data['order_first'],
+              order_sum: yg_data['order_sum'],
+              prod: getProd(yg_data['commodities'])
+            }
+          }
+        };
+        sg_dsp_data.push(sg_tag);
+
+        //----------- CRITEO dsp  -----------//
+        criTag.data = {
+          event : "trackTransaction",
+          id    : yg_data['order_no'],
+          item  : getCriTeoProd(yg_data['commodities'])
+        }
+
+      } else if (yg_data['bd_list_type'] == 'ecom_pay_online') {     // 在线支付完成页
+          rtTag['data'] = {
+              ecom_pay_online: {
+                  order_id: yg_data['order_no'],
+                  order_first: yg_data['order_first'],
+                  order_sum: yg_data['order_sum'],
+                  prod: getProd(yg_data['commodities'])
+              }
+          }
+
+          //----------- 搜狗 dsp  -----------//
+          var sg_tag = {
+            "data": {
+              "ecom_pay_online": {
+                order_id: yg_data['order_no'],
+                order_first: yg_data['order_first'],
+                order_sum: yg_data['order_sum'],
+                prod: getProd(yg_data['commodities'])
+              }
+            }
+          };
+          sg_dsp_data.push(sg_tag);
+
+      } else if (yg_data['bd_list_type'] == 'ecom_reg') {       // 注册成功页
+          rtTag['data'] = {
+              ecom_reg: {
+                  email: yg_data['email'],
+                  phone: yg_data['phone'],
+                  sex: yg_data['sex']
+              }
+          }
+
+          //-----------  pzoom dsp  -----------//
+          _fxcmd.push(['trackEvent','event','reg','注册','1']);
+
+          //-----------  aspiration-cn 广点通 dsp  -----------//
+          gdtData = {
+              "data": {
+                  "ecom_reg": {
+                      "token": gdtToken,
+                      "time": gdtDateTime,
+                      "trackcode": gdtUtmSource,
+                      "EntranceUrl": gdtUtmSource
+                  }
+              }
+          };
+
+          //----------- 搜狗 dsp  -----------//
+          var sg_tag = {
+            "data": {
+             "ecom_reg": {
+                "email": yg_data['email'],
+                "phone": yg_data['phone'],
+                "sex": yg_data['sex']
+              }
+            }
+          };
+          sg_dsp_data.push(sg_tag);
+
+      } else if (yg_data['bd_list_type'] == 'ecom_login') {        // 登陆成功页
+          rtTag['data'] = {
+              ecom_login: {
+                  email: yg_data['email'],
+                  phone: yg_data['phone'],
+                  sex: yg_data['sex']
+              }
+          }
+
+          //----------- 搜狗 dsp  -----------//
+          var sg_tag = {
+            "data": {
+              "ecom_login": {
+                  "email": yg_data['email'],
+                  "phone": yg_data['phone']
+              }
+            }
+          };
+          sg_dsp_data.push(sg_tag);
+      }
+      //-----------  baidu dsp  -----------//
+      _hmt.push(['_setAccount', 'bc66790de6f87c591da5936f04e03efb']);
+      _hmt.push(['_trackRTEvent', rtTag]);
+      (function () {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?bc66790de6f87c591da5936f04e03efb";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+
+      //-----------  pzoom dsp  -----------//
+      (function () {
+          var _pzfx = document['createElement']('script');
+          _pzfx.type = 'text/javascript';
+          _pzfx.async = true;
+          _pzfx.src = '//static.w3t.cn/fx/1/1/fx.js';
+          var sc = document.getElementsByTagName('script')[0];
+          sc.parentNode.insertBefore(_pzfx, sc);
+      })();
+
+      //-----------  aspiration-cn 广点通 dsp  -----------//
+      if (gdtData['data']) {
+          var jsonText = JSON.stringify(gdtData);
+          (function () {
+              var hm = document.createElement("script");
+              hm.src = "//e.paixt.com/hm.ashx?data=" + encodeURI(jsonText);
+              var s = document.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(hm, s);
+          })();
+      }
+
+      //----------- 跟踪用户行为 广点通 dsp  -----------//
+      gdt_tracker.push(["send"]);
+      (function() {
+        var doc=document, h=doc.getElementsByTagName('head')[0], s=doc.createElement('script');
+        s.async=true; s.src='http://qzs.qq.com/qzone/biz/res/gt.js';
+        h && h.insertBefore(s,h.firstChild)
+      })();
+
+      //----------- 搜狗 dsp  -----------//
+      (function () {
+          var hm = document.createElement("script");
+          hm.src = "//p.inte.sogou.com/dsp/js/cbn.js";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+
+      //----------- CRITEO dsp  -----------//
+      if( criTag.data ){
+        window.criteo_q = window.criteo_q || [];
+        window.criteo_q.push({event: "setAccount", account: criTag.account});
+        window.criteo_q.push({event: "setSiteType", type: criTag.siteType});
+        window.criteo_q.push(criTag.data);
+        (function () {
+          var sc = document.createElement("script");
+          sc.async=true; sc.src = "//static.criteo.net/js/ld/ld.js";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(sc, s);
+        })();
+      }
+
+  </script>
+<img src="cm.fcg" style="height: 0px; width: 0px; display: none; border: none; margin: 0px;"><img src="cookiebean" style="height: 0px; width: 0px; display: none; border: none; margin: 0px;"><img src="cookietag" style="height: 0px; width: 0px; display: none; border: none; margin: 0px;"></head>
+<body>
+
+<div id="criteo-tags-div" style="display: none;"><iframe height="0" width="0" src="dis.html" style="display: none;"></iframe></div></body></html>

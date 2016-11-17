@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/cart.css">
+	<script type="text/javascript" src="../js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../js/tools.js"></script>
+	<script type="text/javascript" src="../js/cart.js"></script>
+</head>
+<body id="con">
+		<!-- index_header -->
+	<div id="index_header login_header">
+<!-- 		<div class="count_down">
+			<h3>距离剁手节还剩下：</h3>
+			<p>
+				<span></span><b>天</b>
+				<span></span><b>小时</b>
+				<span></span><b>分</b>
+				<span></span><b>秒</b>
+			</p>
+		</div> -->
+		<div id="headerbanner"></div>
+		<div id="hea_nav">
+			<div class="heanav_con login_nav">
+				<div class="ind_link"><a href="index.html">时尚商城</a></div>
+				<div class="phone phone_left"><a href="index.html">
+					<i class="mobile_phone"></i>
+					手机优购
+					<i class="tip tip_left"></i>
+					</a>
+					<div class="phone_con phone_con1">
+						<div class="clearfix">
+							<div class="f1 qr_code1"></div>
+							<div class="f1 qr_code2">
+								<a class="code2_a1" href="http://www.apple.com/itunes/download/" target="_blank">
+								<a class="code2_a2" href="http://mobile.yougou.com/appVersion/package.sc?channelCode=YgYougouwebA59" target="_blank">
+							</div>
+						</div>
+						<div class="code_tip">
+							下载安装
+							<strong>优购客户端</strong>
+						</div>
+					</div>
+				</div>
+				<div class="hea_login login_log">
+					<div class="login_con">
+						<div class="register">
+							<a href="register.html">注册</a>
+						</div>
+						<div class="login">
+							<a href="login.html">登录</a>
+						</div>
+					</div>
+					<div class="login_success">
+						您好！<span></span>
+						<a class="quit" href="#">退出</a>
+					</div>
+				</div>
+				<div class="phone myy1"><a href="index.html">
+					我的优购
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con myug_con1">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">我的收藏</a></div>
+					</div>
+				</div>
+				<div class="index_confirm">我的订单</div>
+				<div class="phone gonggao gonggao1"><a href="list.html">
+					公告
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con gonggao_pos1 pos1" style="width:200px;">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">我的收藏</a></div>
+					</div>
+				</div>
+				<div class="phone gonggao gonggao2"><a href="list.html">
+					更多
+					<i class="tip"></i>
+					</a>
+					<div class="phone_con myug_con gonggao_pos1 pos2">
+						<div><a href="list.html">我的收藏</a></div>
+						<div><a href="list.html">我的收藏</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="login_logo">
+			<div class="l_logo"><a href="index.html"><img src="../img/login/signin-register-logo.png" alt=""></a></div>
+			<p></p>
+			<div class="cart_step">
+				<ul>
+		            <li class="current">我的购物车<em></em><i></i></li>
+		            <li><a href="confirm.html">提交订单中心</a><em></em><i class="i2"></i></li>
+		            <li>成功提交订单</li>
+	       		</ul>
+			</div>
+		</div>
+	</div>
+
+		<!-- index_container -->
+	
+	<div id="index_container">
+		<div class="cart_con">
+			<div class="noshop">
+				<div class="cart_bg"></div>
+				<div class="ns_right">
+					<h3>您的购物车中暂无商品，赶快选择心爱的商品吧！</h3>
+					<h4><a href="index.html">回到首页</a></h4>
+					<p>您可以：<br/>
+						查看<a href="#">我的收藏夹</a><br/>
+						查看<a href="#">我已购买的商品</a><br/>
+					</p>
+				</div>
+			</div>
+			<div class="haveshop">
+				<div class="cart">
+					<div class="title">
+						<div class="product">
+						<label>
+							<input type="checkbox" id="ck_all">全选
+						</label>
+						</div>
+						<div class="name">商品名称</div>
+						<div class="colorsize">颜色尺码</div>
+						<div class="price">单价</div>
+						<div class="amount">数量</div>
+						<div class="sub">小计</div>
+						<div class="oper">操作</div>
+					</div>
+				</div>
+				<div class="temp" style="display:none;">
+					<div class="product">
+						<input type="checkbox" class="ck">
+					</div>
+					<div class="name">
+						<div class="name1"></div>
+						<div class="name2"></div>
+					</div>
+					<div class="colorsize"></div>
+					<div class="price"></div>
+					<div class="amount">
+						<span class="minus">&nbsp;&nbsp;-&nbsp;&nbsp;</span>
+						<input type="text" value="1" size="1" class="num">
+						<span class="add">&nbsp;&nbsp;+</span>
+					</div>
+					<div class="sub"></div>
+					<div class="oper">
+						<a href="javascript:void(0);">删除</a>
+					</div>
+				</div>
+			</div>
+			<div class="total">
+				<a class="goon" href="detail.html">继续购物</a>
+				<div class="clear_all"><a href="#">清空购物车</a></div>
+				<div class="all_right">
+					<div class="total_con">
+						<strong>总计(不含运费): <span>￥</span></strong>
+						<div class="total_all"></div>
+					</div>
+					<a class="payment" href="#">去结算</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="buy_more">
+		<h3>购买了您购物车中商品的顾客还购买了</h3>
+		<div class="bm_contop">
+			<div class="bmc_left"></div>
+			<div class="bmc_right"></div>
+			<div class="dc_pages">第<span>1</span>页，共2页</div>
+			<div class="clon1">
+			<div class="clothes">
+				<ul class="li">
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05355520001-100490715.shtml#ref=list&amp;po=list">
+									<sup no="100490715" class="mark_small_100490715 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实人字织花牛角袖圆领套头针织衫05355520001" src="../img/list/100490715_01_mb.jpg?2">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05355520001-100490715.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实人字织花牛角袖圆领套头针织衫05355520001">佐丹奴Giordano2016秋季女 织花牛角袖圆领套头针织衫</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>169</strong></span>
+									<del>¥290</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="li">
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+		<h3>购买了您购物车中商品的顾客还购买了</h3>
+		<div class="bm_conbottom">
+			<div class="bmb_left"></div>
+			<div class="bmb_right"></div>
+			<div class="dc_pages2">第<span>1</span>页，共2页</div>
+			<div class="clon2">
+			<div class="clot2">
+				<ul class="li li2">
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list">
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" src="../img/list/100490730_01_mb.jpg?3">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490730.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+				<ul class="li li2">
+					
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100490733_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list">
+									<sup no="100490733" class="mark_small_100490733 salepic"></sup>
+									<img alt="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001" class="" src="../img/list/100373983_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>139</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt>
+								<a target="_blank" href="http://www.yougou.com/c-nain/sku-nme5nwop2461m0-100275034.shtml#ref=list&amp;po=list">
+									<img alt="首尔站：NAIN 女士 新款 韩版时尚宽松民族印花米色连衣裙NME5NW-OP2461M0-2 韩国 首尔站" src="../img/list/100373895_01_mb.jpg">
+								</a>
+							</dt>
+							<dd>
+								<p><a target="_blank" href="http://www.yougou.com/c-giordano/sku-05326603001-100490733.shtml#ref=list&amp;po=list" title="佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤05326603001">佐丹奴Giordano2016秋季女 厚实纯棉拼色条纹圆领长袖T恤</a></p>
+								<h6>
+									<span class="ygprc15 price_no100490715">¥<strong>159</strong></span>
+									<del>¥230</del>
+								</h6>
+								<div class="gocart">
+									<input type="button" class="gocart_btn" value="加入购物车" />
+								</div>
+							</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</div>
+		<!-- login_footer -->
+	<div id="login_footer">
+		<div class="lf_con">
+			<p class="tright">Copyright © 2011-2014 Yougou Technology Co., Ltd.  
+			<a href="http://www.miibeian.gov.cn" target="_blank">粤ICP备09070608号-4</a> 增值电信业务经营许可证：
+			<a href="http://www.miibeian.gov.cn" target="_blank" style="padding-left:0">粤 B2-20090203</a></p>
+		</div>
+	</div>
+</body>
+</html>
